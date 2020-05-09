@@ -87,8 +87,8 @@ body {
   background-color: #FFEAA1;
   background-size: contain;
   background-repeat: repeat-y;
-  height: 300vh;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 .section-1 {
