@@ -6,16 +6,16 @@
 
 //____________________________
 html{
-	width: 100vw;
-	overflow: scroll;
+	width: 100%;
+	// overflow-x: scroll;
 }
 body{
 	background: url('../img/flower/bg.png');
 	background-color: $color-bg;
 	background-size: contain;
-	background-repeat: repeat-y;
-	width: 100vw;
-	// overflow-x: hidden;
+	background-repeat: repeat;
+	width: 100%;
+	overflow-x: hidden;
 	// touch-action: manipulation;
 }
 

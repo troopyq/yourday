@@ -78,16 +78,16 @@ html, body {
 }
 
 html {
-  width: 100vw;
-  overflow: scroll;
+  width: 100%;
 }
 
 body {
   background: url("../img/flower/bg.png");
   background-color: #FFEAA1;
   background-size: contain;
-  background-repeat: repeat-y;
-  width: 100vw;
+  background-repeat: repeat;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .section-1 {
