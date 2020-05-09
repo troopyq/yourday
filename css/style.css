@@ -93,6 +93,8 @@ body {
 .section-1 {
   position: relative;
   height: 680px;
+  height: 100vh;
+  margin-top: 100px;
 }
 .section-1 p {
   margin-top: 110px;
@@ -164,6 +166,7 @@ body {
 .section-3 {
   position: relative;
   margin-bottom: 300px;
+  margin-top: 100px;
 }
 .section-3 p {
   font-size: 48px;
@@ -186,6 +189,7 @@ body {
   align-items: center;
 }
 .section-card .card {
+  position: relative;
   width: 95%;
   height: 450px;
   margin-bottom: 200px;
@@ -201,4 +205,14 @@ body {
 }
 .section-card .card .gif-card img {
   height: 100%;
+}
+.section-card .card .lock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.2s;
+}
+.section-card .card .lock:hover {
+  transform: translate(-50%, -50%) scale(1.1);
 }
