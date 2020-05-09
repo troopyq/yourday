@@ -7,7 +7,6 @@
 //____________________________
 html{
 	width: 100vw;
-	overflow: scroll;
 	overflow-x: hidden;
 }
 body{
@@ -16,10 +15,7 @@ body{
 	background-size: contain;
 	background-repeat: repeat-y;
 	height: 300vh;
-	width: 100%;
-	overflow-x: hidden;
-	overflow-y: scroll;
-
+	width: 100vw;
 }
 
 .section-1{
