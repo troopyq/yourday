@@ -59,7 +59,7 @@ body{
 	position: relative;
 	height: 380px;
 	margin-bottom: 90px;
-	overflow: hidden;
+	// overflow: hidden;
 	p{
 		font-size: 48px;
 		font-weight: bold;
@@ -72,6 +72,9 @@ body{
 		height: 90px;
 		top: 0;
 		right: 0;
+	}
+	.gif-1{
+		overflow: hidden;
 	}
 	.gif-4{
 		top: -20px;

@@ -129,7 +129,6 @@ body {
   position: relative;
   height: 380px;
   margin-bottom: 90px;
-  overflow: hidden;
 }
 .section-2 p {
   font-size: 48px;
@@ -143,6 +142,9 @@ body {
   height: 90px;
   top: 0;
   right: 0;
+}
+.section-2 .gif-1 {
+  overflow: hidden;
 }
 .section-2 .gif-4 {
   top: -20px;
