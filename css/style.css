@@ -95,7 +95,7 @@ body {
   position: relative;
   height: 680px;
   height: 100vh;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 .section-1 p {
   margin-top: 110px;
@@ -127,6 +127,13 @@ body {
   top: 400px;
   text-align: left;
 }
+.section-1 .gif-lapa {
+  position: absolute;
+  top: -200px;
+  right: 0;
+  height: 300px;
+  transform: rotate(-90deg);
+}
 
 .section-2 {
   position: relative;
@@ -150,10 +157,11 @@ body {
   overflow: hidden;
 }
 .section-2 .gif-4 {
-  top: -20px;
+  top: -50px;
+  margin-right: 40px;
 }
 .section-2 .gif-5 {
-  left: 0;
+  left: 20px;
   top: 100px;
 }
 .section-2 .gif-6 {
@@ -162,6 +170,20 @@ body {
   position: absolute;
   right: 0;
   top: 120px;
+}
+.section-2 .flow-01 {
+  position: absolute;
+  height: 350px;
+  top: 200px;
+  left: -120px;
+  transform: rotate(30deg);
+}
+.section-2 .flow-02 {
+  position: absolute;
+  height: 250px;
+  top: -300px;
+  right: -70px;
+  transform: rotate(30deg);
 }
 
 .section-3 {
@@ -184,7 +206,6 @@ body {
 }
 
 .section-card {
-  height: 300vh;
   display: flex;
   flex-direction: column;
   align-items: center;

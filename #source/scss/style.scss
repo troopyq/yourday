@@ -23,7 +23,7 @@ body{
 	position: relative;
 	height: 680px;
 	height: 100vh;
-	margin-top: 100px;
+	margin-top: 200px;
 	p{
 		margin-top: 110px;
 		font-size: 64px;
@@ -54,6 +54,13 @@ body{
 		top: 400px;
 		text-align: left;
 	}
+	.gif-lapa{
+		position: absolute;
+		top: -200px;
+		right: 0;
+		height: 300px;
+		transform: rotate(-90deg);
+	}
 	
 }
 
@@ -79,10 +86,11 @@ body{
 		overflow: hidden;
 	}
 	.gif-4{
-		top: -20px;
+		top: -50px;
+		margin-right: 40px;
 	}
 	.gif-5{
-		left: 0;
+		left: 20px;
 		top: 100px;
 	}
 	.gif-6{
@@ -91,6 +99,20 @@ body{
 		position: absolute;
 		right: 0;
 		top: 120px;
+	}
+	.flow-01{
+		position: absolute;
+		height: 350px;
+		top: 200px;
+		left: -120px;
+		transform: rotate(30deg);
+	}
+	.flow-02{
+		position: absolute;
+		height: 250px;
+		top: -300px;
+		right: -70px;
+		transform: rotate(30deg);
 	}
 }
 
@@ -114,7 +136,6 @@ body{
 }
 
 .section-card{
-	height: 300vh;
 	display: flex;
 	flex-direction: column;
 	// flex-wrap: wrap;
