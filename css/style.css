@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+html, body {
+  font-family: "Comfortaa", cursive;
+}
+
+html {
+  width: 100vw;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+body {
+  background: url("../img/flower/bg.png");
+  background-color: #FFEAA1;
+  background-size: contain;
+  background-repeat: repeat-y;
+  height: 300vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.section-1 {
+  position: relative;
+  height: 680px;
+}
+.section-1 p {
+  margin-top: 110px;
+  font-size: 64px;
+  color: #FF9254;
+  text-align: center;
+  font-weight: bold;
+}
+.section-1 .gif-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.section-1 .gif-2 {
+  position: absolute;
+  width: 264px;
+  height: 226px;
+  right: 0;
+  top: 300px;
+  text-align: right;
+}
+.section-1 .gif-3 {
+  position: absolute;
+  width: 70%;
+  left: -50px;
+  top: 400px;
+  text-align: left;
+}
+
+.section-2 {
+  position: relative;
+  height: 380px;
+  margin-bottom: 90px;
+}
+.section-2 p {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  color: #CD5C5C;
+}
+.section-2 .lov-2 {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: 0;
+  right: 0;
+}
+.section-2 .gif-4 {
+  top: -20px;
+}
+.section-2 .gif-5 {
+  left: 0;
+  top: 100px;
+}
+.section-2 .gif-6 {
+  width: 166px;
+  height: 178px;
+  position: absolute;
+  right: 0;
+  top: 120px;
+}
+
+.section-3 p {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  color: #CD5C5C;
+}

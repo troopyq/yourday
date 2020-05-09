@@ -1,0 +1,99 @@
+// Файл обнуляющих стилей
+@import "nullstyle";
+@import "colors";
+@import "font";
+
+
+//____________________________
+html{
+	width: 100vw;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+body{
+	background: url('../img/flower/bg.png');
+	background-color: $color-bg;
+	background-size: contain;
+	background-repeat: repeat-y;
+	height: 300vh;
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+}
+
+.section-1{
+	position: relative;
+	height: 680px;
+	p{
+		margin-top: 110px;
+		font-size: 64px;
+		color: $color-text-1;
+		text-align: center;
+		font-weight: bold;
+	}
+	.gif-1{
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+	}
+	.gif-2{
+		position: absolute;
+		width: 264px;
+		height: 226px;
+		right: 0;
+		top: 300px;
+		text-align: right;
+	}
+	.gif-3{
+		position: absolute;
+		width: 70%;
+		left: -50px;
+		top: 400px;
+		text-align: left;
+	}
+	
+}
+
+.section-2{
+	position: relative;
+	height: 380px;
+	margin-bottom: 90px;
+	p{
+		font-size: 48px;
+		font-weight: bold;
+		text-align: center;
+		color: $color-text-2;
+	}
+	.lov-2{
+		position: absolute;
+		width: 90px;
+		height: 90px;
+		top: 0;
+		right: 0;
+	}
+	.gif-4{
+		top: -20px;
+	}
+	.gif-5{
+		left: 0;
+		top: 100px;
+	}
+	.gif-6{
+		width: 166px;
+		height: 178px;
+		position: absolute;
+		right: 0;
+		top: 120px;
+	}
+}
+
+.section-3{
+	p{
+		font-size: 48px;
+		font-weight: bold;
+		text-align: center;
+		color: $color-text-2;
+	}
+}
