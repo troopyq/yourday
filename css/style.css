@@ -88,7 +88,6 @@ body {
   background-size: contain;
   background-repeat: repeat-y;
   width: 100vw;
-  overflow-x: hidden;
 }
 
 .section-1 {
@@ -130,6 +129,7 @@ body {
   position: relative;
   height: 380px;
   margin-bottom: 90px;
+  overflow: hidden;
 }
 .section-2 p {
   font-size: 48px;
