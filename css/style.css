@@ -210,9 +210,9 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%);
   transition: all 0.2s;
 }
 .section-card .card .lock:hover {
-  transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%);
 }
