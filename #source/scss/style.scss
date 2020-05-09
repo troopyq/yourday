@@ -6,7 +6,7 @@
 
 //____________________________
 html{
-	width: 100%;
+	max-width: 100vw;
 	// overflow-x: scroll;
 }
 body{
@@ -14,7 +14,7 @@ body{
 	background-color: $color-bg;
 	background-size: contain;
 	background-repeat: repeat;
-	width: 100%;
+	max-width: 100%;
 	overflow-x: hidden;
 	// touch-action: manipulation;
 }
