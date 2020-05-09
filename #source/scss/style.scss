@@ -7,7 +7,7 @@
 //____________________________
 html{
 	width: 100vw;
-	overflow-x: hidden;
+	overflow: scroll;
 }
 body{
 	background: url('../img/flower/bg.png');
@@ -30,6 +30,8 @@ body{
 	}
 	.gif-1{
 		position: absolute;
+		width: 100vw;
+		height: 440px;
 		top: 0;
 		left: 0;
 		overflow: hidden;
@@ -86,10 +88,46 @@ body{
 }
 
 .section-3{
+	position: relative;
+	margin-bottom: 300px;
 	p{
 		font-size: 48px;
 		font-weight: bold;
 		text-align: center;
-		color: $color-text-2;
+		color: $color-text-3;
+	}
+	.gif-7{
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+}
+
+.section-card{
+	height: 300vh;
+	display: flex;
+	flex-direction: column;
+	// flex-wrap: wrap;
+	align-items: center;
+	.card{
+		width: 95%;
+		height: 450px;
+		margin-bottom: 200px;
+		// margin: 0 auto;
+		border: 2px solid rgba(228,213,149,0.7);
+		background-color: $color-card;
+		box-shadow: 0 5px 15px $shadow-card;
+		border-radius: 60px 60px 20px 20px;
+		
+		.gif-card{
+			height: 200px;
+			text-align: center;
+			margin-top: -200px;
+			img{
+				height: 100%;
+			}
+		}
 	}
 }

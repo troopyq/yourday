@@ -79,7 +79,7 @@ html, body {
 
 html {
   width: 100vw;
-  overflow-x: hidden;
+  overflow: scroll;
 }
 
 body {
@@ -104,6 +104,8 @@ body {
 }
 .section-1 .gif-1 {
   position: absolute;
+  width: 100vw;
+  height: 440px;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -157,9 +159,44 @@ body {
   top: 120px;
 }
 
+.section-3 {
+  position: relative;
+  margin-bottom: 300px;
+}
 .section-3 p {
   font-size: 48px;
   font-weight: bold;
   text-align: center;
-  color: #CD5C5C;
+  color: #DF818F;
+}
+.section-3 .gif-7 {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.section-card {
+  height: 300vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-card .card {
+  width: 95%;
+  height: 450px;
+  margin-bottom: 200px;
+  border: 2px solid rgba(228, 213, 149, 0.7);
+  background-color: #FFF8DC;
+  box-shadow: 0 5px 15px rgba(71, 71, 71, 0.25);
+  border-radius: 60px 60px 20px 20px;
+}
+.section-card .card .gif-card {
+  height: 200px;
+  text-align: center;
+  margin-top: -200px;
+}
+.section-card .card .gif-card img {
+  height: 100%;
 }
