@@ -263,6 +263,7 @@ body {
   height: 100%;
 }
 .section-card .card .lock {
+  display: none;
   position: absolute;
   z-index: 2;
   top: 50%;
