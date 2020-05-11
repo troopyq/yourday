@@ -23,18 +23,17 @@
 	<body>
 		<audio src="sound/Sound_06336.mp3" autoplay preload></audio>
 			
-			<div class="row">
-				<div class="col-12 section-1">
+			<div class="row justify-content-center">
+				<div class="col-12 col-sm-4 section-1">
 					<p>С Днем Рождения Дашуля!</p>
 					<img class="gif-1" src="img/gif/XZ5V.gif" alt="">
 					<img src="img/gif/3jng.gif" alt="" class="gif-2">
 					<img src="img/gif/NRI0.gif" alt="" class="gif-3">
 					<img src="img/gif/Yu5t.gif" alt="" class="gif-lapa">
-
-					
 				</div>
-
-				<div class="col-12 section-2">
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-12 col-sm-4 section-2">
 					<p>Тебе уже исполнилось 17 лет!!!</p>
 					<!-- <img class="gif-1" src="img/gif/XZ5V.gif" alt=""> -->
 					<img src="img/gif/4tyu.gif" alt="" class="gif-4 lov-2">
@@ -43,18 +42,19 @@
 					<img src="img/flower/flow-01.png" alt="" class="flow-01">
 					<img src="img/flower/pngwave (1).png" alt="" class="flow-02">
 				</div>
-
-				<div class="col-12 section-3">
+			</div>	
+			<div class="row justify-content-center">
+				<div class="col-12 col-sm-4 section-3">
 					<p>Давай Вместе Вспомним Что Произошло<br> За Это<br> Время</p>
 					<img src="img/gif/WS2p.gif" alt="" class="gif-7">
 				</div>
-
+			</div>
 
 			</div>
 
-			<div class="row">
+			<div class="row justify-content-center">
 				<!-- <img src="img/gif/3vIU.gif" alt=""> -->
-				<div class="col-12">
+				<div class="col-12 col-sm-4">
 
 					<div class="slider section-card">
 
@@ -430,7 +430,7 @@
  			$('.slider').slick({
 				// dots: true,
 				infinite: false,
-				speed: 300,
+				speed: 1500,
 				// accessibility: true,
 				arrows: true,
 				centerMode: true,
@@ -439,6 +439,11 @@
  				swipeToSlide: true,
  				vertical: true, 
  				adaptiveHeight: true,
+ 				cssEase: "ease-in-out",
+ 				lazyLoad: "ondemand",
+ 				touchThreshold: 8,
+ 				focusOnChange: true,
+ 				nextArrow: $(".card"),
  				// verticalSwiping: true,
  			});
  		</script>
