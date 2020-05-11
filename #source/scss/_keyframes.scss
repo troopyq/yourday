@@ -1,0 +1,30 @@
+@keyframes flow-2 {
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@keyframes flow-1 {
+	0%{
+		transform: scale(1);
+		transform: rotate(20deg);
+		}
+	35%{
+		transform: scale(1.03);
+		transform: rotate(24deg);
+	}	
+	60%{
+		transform: rotate(10deg);
+		transform: scale(1.06);
+	}
+	75%{
+		transform: rotate(7deg);
+		transform: scale(1.09);
+	}
+	100%{
+		transform: rotate(15deg);
+		transform: scale(1.02);
+	}
+}

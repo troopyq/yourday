@@ -2,6 +2,8 @@
 @import "nullstyle";
 @import "colors";
 @import "font";
+@import "keyframes";
+
 
 
 //____________________________
@@ -106,13 +108,15 @@ body{
 		top: 200px;
 		left: -120px;
 		transform: rotate(30deg);
+		transform: scale(1);
+		animation: flow-1 4s ease-in-out infinite forwards alternate-reverse;
 	}
 	.flow-02{
 		position: absolute;
-		height: 250px;
+		height: 200px;
 		top: -300px;
 		right: -70px;
-		transform: rotate(30deg);
+		animation: flow-2 4s linear infinite forwards;
 	}
 }
 
@@ -137,14 +141,17 @@ body{
 
 .section-card{
 	display: flex;
-	flex-direction: column;
+	margin-bottom: 5px;
+	// flex-direction: column;
 	// flex-wrap: wrap;
-	align-items: center;
+	// align-items: center;
 	.card{
+		display: flex;
 		position: relative;
 		width: 95%;
-		height: 650px;
-		margin-bottom: 200px;
+		height: 600px;
+		margin-top: 200px;
+		margin-bottom: 5px;
 		// margin: 0 auto;
 		border: 2px solid rgba(228,213,149,0.7);
 		background-color: $color-card;
@@ -154,9 +161,11 @@ body{
 		
 
 		.gif-card{
+			display: flex;
 			height: 200px;
-			text-align: center;
-			margin-top: -200px;
+			justify-content: center;
+			margin-top: -195px;
+
 			img{
 				height: 100%;
 			}
