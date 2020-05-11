@@ -142,23 +142,19 @@ body{
 .section-card{
 	display: flex;
 	margin-bottom: 5px;
-	// flex-direction: column;
-	// flex-wrap: wrap;
-	// align-items: center;
+
 	.card{
 		display: flex;
 		position: relative;
 		width: 95%;
-		height: 600px;
+		height: 550px;
 		margin-top: 200px;
-		margin-bottom: 5px;
-		// margin: 0 auto;
+		margin-bottom: 37px;
+
 		border: 2px solid rgba(228,213,149,0.7);
 		background-color: $color-card;
 		box-shadow: 0 5px 15px $shadow-card;
 		border-radius: 60px 60px 20px 20px;
-		
-		
 
 		.gif-card{
 			display: flex;
@@ -185,13 +181,14 @@ body{
 
 		&-img{
 			width: 100%;
-			height: 80%;
+			max-height: 90%;
 			overflow: hidden;
-			border-radius: 60px 60px 0px 0px;
+			border-radius: 60px 60px 5px 5px;
 			img{
+				// margin-top: 50px;
 				width: 100%;
 				height: 100%;
-				filter: blur(30px);
+				// filter: blur(30px);
 			}
 		}
 	}
