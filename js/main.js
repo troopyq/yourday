@@ -19,12 +19,32 @@ for (let i=1; i <= photoAll; i++){
     text[i] = replace;
   }
 
-  card = `<div class="card">
+  card = `
+            <div id="${i}" class="card flipper card-next">
               <div class="gif-card"><img src="img/gif/${gifNum}.gif" alt=""></div>
-              <div class="lock"><img src="img/lock/lock-close.svg" alt=""></div>
-              <div class="card-img"><img src="img/photo/${photoNum}.jpg" alt=""></div>
-              <p>${text[i]}</p>
-            </div>`;
+              <div class="lock lock-close front"><img src="img/lock/lock-close.svg" alt=""></div>
+              <div class="card-img back"><img src="img/photo/${photoNum}.jpg" alt=""></div>
+              <div class="card-transparent back"></div>
+              <div class="text front"><div class="text_inner"><p>${text[i]}</p></div></div>
+            </div>
+          `;
   
   elem.append(card);
 }
+$(".slider .card:first-child").children(".lock").children("img").attr("src", "img/lock/lock-open.svg");
+$(".slider .card:first-child").children(".lock").toggleClass('lock-close lock-open');
+
+
+$(".lock img").click( function(){
+  nextId = $(this).parent().parent().index(".card") + 2;
+  console.log(nextId);
+  if ($(this).parent().hasClass("lock-open")){
+    $(this).parent().parent().addClass('open');
+    // $(this).parent().parent().addClass('card-next');
+    $(this).parent().children("text").addClass('text-none');
+    $(`#${nextId}`).children(".lock").toggleClass('lock-close lock-open');
+    $(`#${nextId}`).children(".lock").children("img").attr("src", "img/lock/lock-open.svg");
+  };
+    console.log($(`#${nextId}`).children(".lock"));
+    console.log($(`#${nextId}`));
+});

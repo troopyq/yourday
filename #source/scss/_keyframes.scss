@@ -30,13 +30,14 @@
 }
 
 @keyframes right {
-	0%{
+	15%{
 		opacity: 1;
 		transform: scale(1);
 	}
-	20%{
+	30%{
 		transform: scale(0.8) translateX(0px);
-		background-color: darken($shadow-card, 50%);
+		background-color: darken($color-touch, 50%);
+		filter: blur(1px);
 	}
 	60%{
 		transform: scale(0.8) translateX(100px);
@@ -44,7 +45,7 @@
 	}	
 	80%{
 		transform: scale(1) translateX(120px);
-		background-color: $shadow-card;
+		background-color: $color-touch;
 	}
 	100%{
 		transform: scale(1) translateX(140px);
@@ -59,7 +60,8 @@
 	}
 	20%{
 		transform: scale(0.8) translateX(0px);
-		background-color: darken($shadow-card, 50%);
+		background-color: darken($color-touch, 50%);
+		filter: blur(1px);
 	}
 	60%{
 		transform: scale(0.8) translateX(-100px);
@@ -67,7 +69,7 @@
 	}	
 	80%{
 		transform: scale(1) translateX(-120px);
-		background-color: $shadow-card;
+		background-color: $color-touch;
 	}
 	100%{
 		transform: scale(1) translateX(-140px);
@@ -76,24 +78,29 @@
 }
 
 @keyframes tap {
-	0%{
+	20%{
 		opacity: 1;
 		transform: scale(1);
 	}
-	20%{
+	30%{
 		transform: scale(0.8);
-		background-color: darken($shadow-card, 50%);
+		background-color: darken($color-touch, 50%);
+		filter: blur(1px);
 	}
-	60%{
+	50%{
 		transform: scale(0.8) ;
 		opacity: 1;
 	}	
-	80%{
-		transform: scale(1);
-		background-color: $shadow-card;
+	70%{
+		transform: scale(0.8);
+		background-color: $color-touch;
 	}
+	// 65%{
+	// 	transform: scale(0.8);
+	// 	opacity: 0.2;
+	// }
 	100%{
-		transform: scale(1);
-		opacity: 1;
+		transform: scale(0.95);
+		opacity: 0;
 	}
 }

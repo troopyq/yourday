@@ -14,6 +14,6 @@ $('.slider').slick({
  				lazyLoad: "progressive",
  				touchThreshold: 8,
  				focusOnChange: true,
- 				nextArrow: $(".card"),
+ 				nextArrow: $(".back"),
  				// verticalSwiping: true,
  			});
