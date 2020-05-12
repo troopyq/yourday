@@ -203,3 +203,39 @@ body{
 		}
 	}
 }
+.gide{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 50px;
+	.touch{
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background-color: darken($shadow-card, 10%);
+		filter: blur(5px);
+		margin-bottom: 15px;
+		transform: scale(1);
+	}
+	&_right{
+		animation: right 2s ease-in-out infinite backwards;
+		animation-delay: 2s;
+	}
+	&_left{
+		animation: left 2s ease-in-out infinite backwards;
+		animation-delay: 3s;
+	}
+	&_tap{
+		animation: tap 1.5s ease-in-out infinite backwards;
+		animation-delay: 1.5s;
+	}
+
+	p{
+		margin-top: 10px;
+		font-size: 16px;
+		font-weight: bold;
+		text-align: center;
+		color: darken($color-text-4, 30%);
+	}
+}
