@@ -193,5 +193,13 @@ body{
 				// filter: blur(30px);
 			}
 		}
+
+		p{
+			text-align: center;
+			justify-content: center;
+			font-size: 22px;
+			color: $color-text-4;
+			text-shadow: 0px 2px 5px $shadow-text;
+		}
 	}
 }
