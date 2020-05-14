@@ -33,18 +33,18 @@ for (let i=1; i <= photoAll; i++){
 }
 $(".slider .card:first-child").children(".lock").children("img").attr("src", "img/lock/lock-open.svg");
 $(".slider .card:first-child").children(".lock").toggleClass('lock-close lock-open');
-
+$(".slider .card").children(".text").hide();
+$(".slider .card:first-child").children(".text").show();
 
 $(".lock img").click( function(){
   nextId = $(this).parent().parent().index(".card") + 2;
-  console.log(nextId);
   if ($(this).parent().hasClass("lock-open")){
+    
     $(this).parent().parent().addClass('open');
     // $(this).parent().parent().addClass('card-next');
-    $(this).parent().children("text").addClass('text-none');
+    $(this).parent().children(".text").addClass('text-none');
     $(`#${nextId}`).children(".lock").toggleClass('lock-close lock-open');
     $(`#${nextId}`).children(".lock").children("img").attr("src", "img/lock/lock-open.svg");
+    $(`#${nextId}`).children(".text").show();
   };
-    console.log($(`#${nextId}`).children(".lock"));
-    console.log($(`#${nextId}`));
 });

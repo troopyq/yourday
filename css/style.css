@@ -73,8 +73,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+@font-face {
+  font-family: "Pixel Georgia";
+  src: url(../fonts/Pixel_Georgia.ttf);
+}
+@font-face {
+  font-family: "Pixel Digivolve";
+  src: url(../fonts/Pixel_Digivolve.otf);
+}
+@font-face {
+  font-family: "Pixel Progress";
+  src: url(../fonts/Pixel_Progress.otf);
+}
 html, body {
-  font-family: "Comfortaa", cursive;
+  font-family: "Pixel Georgia", sans-serif;
 }
 
 @keyframes flow-2 {
@@ -188,6 +200,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   touch-action: manipulation;
+  text-transform: lowercase;
 }
 
 .section-1 {
@@ -311,6 +324,7 @@ body {
 }
 
 .open {
+  transition-delay: 2s;
   transform: rotateY(180deg);
 }
 
@@ -326,6 +340,7 @@ body {
   justify-content: center;
   transform-style: preserve-3d;
   position: relative;
+  transition-delay: 0.3s;
 }
 
 .front, .back {
@@ -382,8 +397,9 @@ body {
   z-index: 3;
   top: 50%;
   left: 50%;
+  opacity: 1;
   transform: translate(-50%, -50%) scale(1);
-  transition: all 0.2s;
+  transition: all 0.3s;
 }
 .section-card .card .lock img:hover .lock {
   transform: translate(-50%, -50%) scale(1.1);
@@ -391,7 +407,7 @@ body {
 .section-card .card-img {
   margin-top: -6px;
   min-width: 100%;
-  max-height: 90%;
+  max-height: 100%;
   overflow: hidden;
   border-radius: 60px 60px 5px 5px;
 }
