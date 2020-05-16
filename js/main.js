@@ -17,7 +17,7 @@ var idMusic = 1;
 // music1.addEventListener("ended", function() {
 //   console.log(true)
 // });
-
+$("body").on("click", function(){
 function musicPlay(){
   let ifEnd = false;
   let music = new Audio();
@@ -32,7 +32,7 @@ function musicPlay(){
 };
 
 musicPlay();
-
+})
 
 
 for (let i=1; i <= photoAll; i++){
