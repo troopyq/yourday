@@ -27,16 +27,17 @@
 			<div class="fakeLoader"></div>
 			
 		
-			
-			<audio preload>
-				<source id="1" src="sound/music/1.mp3" type="audio/mpeg" play="on" preload>
-				<source id="2" src="sound/music/2.mp3" type="audio/mpeg" preload>
-				<source id="3" src="sound/music/3.mp3" type="audio/mpeg" preload>
-				<source id="4" src="sound/music/4.mp3" type="audio/mpeg" preload>
-				<source id="5" src="sound/music/5.mp3" type="audio/mpeg" preload>
-				<source id="6" src="sound/music/6.mp3" type="audio/mpeg" preload>
-
-			</audio><button class="music-btn music-pause" ></button>
+			<div class="div-audio">
+		  <audio src="sound/music/1.mp3" type="audio/mpeg" preload></audio>
+			<audio src="sound/music/1.mp3" type="audio/mpeg" play="on" preload></audio>
+			<audio src="sound/music/2.mp3" type="audio/mpeg" play="on" preload></audio>
+			<audio src="sound/music/3.mp3" type="audio/mpeg" play="on" preload></audio>
+			<audio src="sound/music/4.mp3" type="audio/mpeg" play="on" preload></audio>
+			<audio src="sound/music/5.mp3" type="audio/mpeg" play="on" preload></audio>
+			<audio src="sound/music/6.mp3" type="audio/mpeg" play="on" preload></audio>
+ -
+			<button class="music-btn music-pause" ></button>
+			</div>
 		
 
 			<div class="row justify-content-center">
@@ -102,11 +103,6 @@
 	<!-- 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
  -->
-    <script src="js/text.js"></script>
- 		
- 		<script src="js/main.js"></script>
- 		<script src="slick/slick-min.js"></script>
- 		<script src="js/slick-settings.js"></script>
  		<script src="loader/fakeLoader.min.js"></script>
  		<script>
  			 $.fakeLoader({
@@ -115,5 +111,11 @@
             spinner:'spinner2'
     });
  		</script>
+    <script src="js/text.js"></script>
+ 		
+ 		<script src="js/main.js"></script>
+ 		<script src="slick/slick-min.js"></script>
+ 		<script src="js/slick-settings.js"></script>
+ 		
 	</body>
 </html>

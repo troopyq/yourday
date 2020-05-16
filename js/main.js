@@ -9,7 +9,7 @@ var elem = $('.slider');
 var gifNum = 0; 
 var photoNum = 0;
 
-var idMusic = 1;
+var idMusic = 5;
 // let music1 = new Audio();
 // music1.src = "../sound/music/1.mp3";
 // music1.src = "../sound/start.mp3";
@@ -17,18 +17,22 @@ var idMusic = 1;
 // music1.addEventListener("ended", function() {
 //   console.log(true)
 // });
+let idAudio = 0;
 $(".music-btn").on("click", function(){
-  let idAudio = 1;
+  console.log(this)
+  let nowPlay = this.parentElement.firstElementChild;
   if($(this).hasClass("music-pause")){
-    this.previousSibling.play();
+    this.parentElement.firstElementChild.play();
+    
   }else{
-    this.previousSibling.pause();
+    this.parentElement.firstElementChild.pause();
   }
-  let audio = this.previousSibling;
-  audio.addEventListener("ended", function(){
-    $(`#${idAudio}`).pause();
+  let parent = this.parentElement;
+  let nextAudio = nowPlay.nextElementSibling;
+  nowPlay.addEventListener("ended", function(){
+    nowPlay.pause();
     idAudio++;
-    $(`#${idAudio}`).play();
+    nowPlay.nextElementSibling.play();
 //     if (idMusic > 6) idMusic = 1; 
   })
 // function musicPlay(){
@@ -74,17 +78,21 @@ $(".slider .card:first-child").children(".lock").toggleClass('lock-close lock-op
 $(".slider .card").children(".text").hide();
 $(".slider .card:first-child").children(".text").show();
 
-$(".lock img").click( function(){
+$(".lock img").on("click", function(){
+
   nextId = $(this).parent().parent().index(".card") + 2;
   if ($(this).parent().hasClass("lock-open")){
     
     $(this).parent().parent().addClass('open');
     // $(this).parent().parent().addClass('card-next');
     $(this).parent().children(".text").addClass('text-none');
+    console.log("fdgsfdsafsef")
     $(`#${nextId}`).children(".lock").toggleClass('lock-close lock-open');
     $(`#${nextId}`).children(".lock").children("img").attr("src", "img/lock/lock-open.svg");
     $(`#${nextId}`).children(".text").show();
+    console.log("fdgsfdsafsef")
   };
+  console.log("fdgsfdsafsef")
 });
 
 $(".music-btn").click( function(){
