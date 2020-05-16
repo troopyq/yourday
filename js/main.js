@@ -117,8 +117,6 @@ $(".slider .card:first-child").children(".text").show();
 
 $(`#${photoAll1+1}`).children(".lock").children("img").attr("src", "img/lock/lock-close.svg");
 $(`#${photoAll1+1}`).children(".lock").toggleClass('lock-open lock-close');
-console.log($(`#${photoAll1+1}`).children(".lock").hasClass("lock-close"))
-console.log($(`#${photoAll1+1}`).children(".lock"))
 
 $(".lock img").on("click", function(){
   if ($(`#${photoAll1}`).children(".lock").hasClass("lock-open")){
@@ -127,6 +125,7 @@ $(".lock img").on("click", function(){
   nextId = $(this).parent().parent().index(".card") + 2;
   if ($(this).parent().hasClass("lock-open")){
     tap.play();
+    console.log(tap)
     $(this).parent().fadeOut(300);
     $(this).parent().parent().addClass('open');
     // $(this).parent().parent().addClass('card-next');
