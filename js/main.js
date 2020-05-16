@@ -17,7 +17,7 @@ var idMusic = 1;
 // music1.addEventListener("ended", function() {
 //   console.log(true)
 // });
-$("body").on("click", function(){
+
 function musicPlay(){
   let ifEnd = false;
   let music = new Audio();
@@ -30,9 +30,7 @@ function musicPlay(){
     return musicPlay();
   })
 };
-
 musicPlay();
-})
 
 
 for (let i=1; i <= photoAll; i++){
@@ -76,3 +74,6 @@ $(".lock img").click( function(){
   };
 });
 
+$(".music-btn").click( function(){
+  $(this).toggleClass("music-pause music-play")
+})
