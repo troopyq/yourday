@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /*Обнуление*/
-@import url("../fonts/Pixel_Georgia.ttf");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap");
 * {
   padding: 0;
@@ -77,14 +76,6 @@ h1, h2, h3, h4, h5, h6 {
 @font-face {
   font-family: "Pixel Georgia";
   src: url(../fonts/Pixel_Georgia.ttf);
-}
-@font-face {
-  font-family: "Pixel Digivolve";
-  src: url(../fonts/Pixel_Digivolve.otf);
-}
-@font-face {
-  font-family: "Pixel Progress";
-  src: url(../fonts/Pixel_Progress.otf);
 }
 html, body {
   font-family: "Pixel Georgia", sans-serif;
@@ -595,4 +586,8 @@ body {
   border-top: 30px solid transparent;
   border-bottom: 30px solid transparent;
   transition: all 0.3s;
+}
+
+.row-1 {
+  margin-bottom: 100px;
 }
