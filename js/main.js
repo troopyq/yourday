@@ -17,21 +17,34 @@ var idMusic = 1;
 // music1.addEventListener("ended", function() {
 //   console.log(true)
 // });
-
-function musicPlay(){
-  let ifEnd = false;
-  let music = new Audio();
-  music.src = `../sound/music/${idMusic}.mp3`;
-  music.play();
-  music.addEventListener("ended", function() {
-    ifEnd = true;
-    idMusic++;
-    if (idMusic > 6) idMusic = 1; 
-    return musicPlay();
+$(".music-btn").on("click", function(){
+  let idAudio = 1;
+  if($(this).hasClass("music-pause")){
+    this.previousSibling.play();
+  }else{
+    this.previousSibling.pause();
+  }
+  let audio = this.previousSibling;
+  audio.addEventListener("ended", function(){
+    $(`#${idAudio}`).pause();
+    idAudio++;
+    $(`#${idAudio}`).play();
+//     if (idMusic > 6) idMusic = 1; 
   })
-};
-musicPlay();
-
+// function musicPlay(){
+//   let ifEnd = false;
+//   let music = new Audio();
+//   music.src = `../sound/music/${idMusic}.mp3`;
+//   music.play();
+//   music.addEventListener("ended", function() {
+//     ifEnd = true;
+//     idMusic++;
+//     if (idMusic > 6) idMusic = 1; 
+//     return musicPlay();
+//   })
+// };
+// musicPlay();
+})
 
 for (let i=1; i <= photoAll; i++){
   gifNum += 1;
