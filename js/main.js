@@ -9,6 +9,32 @@ var elem = $('.slider');
 var gifNum = 0; 
 var photoNum = 0;
 
+var idMusic = 1;
+// let music1 = new Audio();
+// music1.src = "../sound/music/1.mp3";
+// music1.src = "../sound/start.mp3";
+// music1.play();
+// music1.addEventListener("ended", function() {
+//   console.log(true)
+// });
+
+function musicPlay(){
+  let ifEnd = false;
+  let music = new Audio();
+  music.src = `../sound/music/${idMusic}.mp3`;
+  music.play();
+  music.addEventListener("ended", function() {
+    ifEnd = true;
+    idMusic++;
+    if (idMusic > 6) idMusic = 1; 
+    return musicPlay();
+  })
+};
+
+musicPlay();
+
+
+
 for (let i=1; i <= photoAll; i++){
   gifNum += 1;
   photoNum += 1;
@@ -49,3 +75,4 @@ $(".lock img").click( function(){
     $(`#${nextId}`).children(".text").show();
   };
 });
+
