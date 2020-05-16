@@ -1,3 +1,5 @@
+let tap = new Audio();
+tap.src = "../sound/tap.mp3"
 
 var gifAll = 19;
 var photoAll1 = 79;
@@ -124,6 +126,7 @@ $(".lock img").on("click", function(){
   }
   nextId = $(this).parent().parent().index(".card") + 2;
   if ($(this).parent().hasClass("lock-open")){
+    tap.play();
     $(this).parent().fadeOut(300);
     $(this).parent().parent().addClass('open');
     // $(this).parent().parent().addClass('card-next');
