@@ -124,7 +124,7 @@ $(".lock img").on("click", function(){
   }
   nextId = $(this).parent().parent().index(".card") + 2;
   if ($(this).parent().hasClass("lock-open")){
-    
+    $(this).parent().fadeOut(300);
     $(this).parent().parent().addClass('open');
     // $(this).parent().parent().addClass('card-next');
     $(this).parent().children(".text").addClass('text-none');
