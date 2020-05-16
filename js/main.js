@@ -1,3 +1,4 @@
+
 var gifAll = 19;
 var photoAll = 79;
 var replace = 'Просто смотрите фото ^_^';

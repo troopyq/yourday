@@ -104,3 +104,32 @@
 		opacity: 0;
 	}
 }
+
+@keyframes lock-tap{
+	0%{
+		opacity: 0;
+		transform: scale(1);
+	}
+	50%{
+		opacity: 0;
+		transform: scale(1);
+	}
+	55%{
+		opacity: 1;
+		transform: scale(1);
+	}
+	70%{
+		transform: scale(0.6);
+		opacity: 0.6;
+	}
+
+}
+@keyframes lock {
+	55%{
+		transform: scale(1);
+	}
+	75%{
+		transform: scale(0.9);
+		opacity: 0.7;
+	}
+}

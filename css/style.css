@@ -188,6 +188,33 @@ html, body {
     opacity: 0;
   }
 }
+@keyframes lock-tap {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(0.6);
+    opacity: 0.6;
+  }
+}
+@keyframes lock {
+  55% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+}
 html {
   max-width: 100vw;
 }
@@ -479,6 +506,27 @@ body {
 .gide_tap {
   animation: tap 2s ease-in-out infinite backwards;
   animation-delay: 1.5s;
+}
+.gide_lock {
+  background-image: url("../img/lock/lock-open.svg");
+  background-size: contain;
+  width: 60px;
+  height: 70px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: lock 2s ease-in-out infinite backwards;
+}
+.gide_lock_tap {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  opacity: 0;
+  filter: blur(1px);
+  transform: scale(1);
+  animation: lock-tap 2s ease-in-out infinite backwards;
+  background-color: rgba(46, 46, 46, 0.5);
 }
 .gide p {
   margin-top: 10px;

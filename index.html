@@ -13,14 +13,19 @@
 		<link rel="stylesheet" href="css/bootstrap-grid.min.css">
 		
 		<!-- Slick Slider CSS -->
+
 		<link rel="stylesheet" href="slick/slick-theme.css">
 		<link rel="stylesheet" href="slick/slick.css">
+
+		<link rel="stylesheet" href="loader/fakeLoader.min.css">
+
 		<link rel="stylesheet" href="css/style.css">
 		<!-- <link rel="stylesheet" href="css/style.css?v1"> -->
 		
 	</head>
 	<body>
-			
+			<div class="fakeLoader"></div>
+
 			<div class="row justify-content-center">
 				<div class="col-12 col-sm-4 section-1">
 					<p>С Днем Рождения Дашуля!</p>
@@ -51,6 +56,8 @@
 
 			<div class="row justify-content-center">
 				<div class="col-12 col-sm-4 gide">
+					<div class="gide_lock"><div class="gide_lock_tap"></div></div>
+					<p>Нажми на замок чтобы открыть</p>
 					<div class="gide_tap touch"></div>
 					<!-- <div class="gide_left touch"></div> -->
 					<p>Нажми на слайд чтобы смотреть дальше</p>
@@ -78,7 +85,8 @@
 			</div>
 			
 		<script src="js/jquery-3.4.1.slim.min.js"></script>
-		<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
  -->
     <script src="js/text.js"></script>
@@ -86,5 +94,13 @@
  		<script src="js/main.js"></script>
  		<script src="slick/slick-min.js"></script>
  		<script src="js/slick-settings.js"></script>
+ 		<script src="loader/fakeLoader.min.js"></script>
+ 		<script>
+ 			 $.fakeLoader({
+            timeToHide:1200,               
+            bgColor: '#FFEAA1', 
+            spinner:'spinner2'
+    });
+ 		</script>
 	</body>
 </html>

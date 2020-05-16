@@ -312,7 +312,27 @@ transform: rotateY(180deg);
 		animation: tap 2s ease-in-out infinite backwards;
 		animation-delay: 1.5s;
 	}
-
+	&_lock{
+		background-image: url("../img/lock/lock-open.svg");
+		background-size: contain;
+		width: 60px;
+		height: 70px;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		animation: lock 2s ease-in-out infinite backwards;
+		&_tap{
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			opacity: 0;
+			filter: blur(1px);
+			transform: scale(1);
+			animation: lock-tap 2s ease-in-out infinite backwards;
+			background-color: darken($color-touch, 10%);
+		}
+	}
 	p{
 		margin-top: 10px;
 		margin-bottom: 30px;
