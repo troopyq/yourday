@@ -1,5 +1,5 @@
 let tap = new Audio();
-tap.src = "../sound/tap.mp3"
+tap.src = "sound/tap.mp3"
 
 var gifAll = 19;
 var photoAll1 = 79;
