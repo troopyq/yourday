@@ -15,29 +15,58 @@ var photoNum = 0;
 
 
 let idAudio = 4;
+let musics = $(".div-audio").children("audio");
 
-
-$(".music-btn").on("click", function playMusic(){
+function playMusic(){  
   
-  let musics = $(".div-audio").children("audio");
+  // console.log(musics[idAudio])
   console.log(musics[idAudio])
-  console.log(idAudio < musics.length)
-  if($(this).hasClass("music-pause")){
-    musics[idAudio].play();
-    console.log('play')
-  }
-  else musics[idAudio].pause(); 
+  console.log(!musics[idAudio].paused)
 
+  if ( musics[idAudio].paused && $(".music-btn").hasClass("music-play")){  
+    musics[idAudio].play();
+    console.log('play____');
+  }
+  // if($(".music-btn").hasClass("music-pause")){
+  //     musics[idAudio].play();
+  //     console.log('play');
+  //   }
+
+  // if ($(".music-btn").hasClass("music-play")){
+  //   musics[idAudio].pause();
+  //   console.log('pause');
+  // }
+  
+ 
   musics[idAudio].addEventListener("ended", function(){
     musics[idAudio].pause();
     console.log('next')
-    if (idAudio < musics.length){
+    if (idAudio < musics.length - 1){
       idAudio++;
-    }
-    playMusic();
+       console.log(idAudio);
+       console.log('________');
+       playMusic();
+    }else setTimeout(playMusic, 500);
+    
   })
+}
 
+$(".music-btn").on("click", playMusic);
+$(".music-btn").click( function(){
+  
+
+  if ($(".music-btn").hasClass("music-pause")){
+    $(".music-btn").toggleClass("music-pause music-play");
+    musics[idAudio].play();
+    console.log('play');
+  }else if($(".music-btn").hasClass("music-play")){
+    $(".music-btn").toggleClass("music-play music-pause");
+    musics[idAudio].pause();
+    console.log('pause');
+  }
 })
+
+
 
 let id = 0
 
@@ -145,6 +174,3 @@ $(".lock img").on("click", function(){
  
 });
 
-$(".music-btn").click( function(){
-  $(this).toggleClass("music-pause music-play")
-})
