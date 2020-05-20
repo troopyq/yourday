@@ -34,7 +34,7 @@ $(".music-btn").on("click", function playMusic(){
     if (idAudio < musics.length){
       idAudio++;
     }
-    playMusic(idAudio);
+    playMusic();
   })
 
 })
