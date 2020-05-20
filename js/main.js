@@ -1,5 +1,6 @@
 let tap = new Audio();
-tap.src = "sound/tap.mp3"
+tap.src = "sound/tap.mp3";
+tap.volume = 0.1;
 
 var gifAll = 19;
 var photoAll1 = 79;
@@ -17,9 +18,9 @@ var photoNum = 0;
 let idAudio = 4;
 let musics = $(".div-audio").children("audio");
 
+
+
 function playMusic(){  
-  
-  // console.log(musics[idAudio])
   console.log(musics[idAudio])
   console.log(!musics[idAudio].paused)
 
@@ -27,16 +28,7 @@ function playMusic(){
     musics[idAudio].play();
     console.log('play____');
   }
-  // if($(".music-btn").hasClass("music-pause")){
-  //     musics[idAudio].play();
-  //     console.log('play');
-  //   }
 
-  // if ($(".music-btn").hasClass("music-play")){
-  //   musics[idAudio].pause();
-  //   console.log('pause');
-  // }
-  
  
   musics[idAudio].addEventListener("ended", function(){
     musics[idAudio].pause();
@@ -67,9 +59,7 @@ $(".music-btn").click( function(){
 })
 
 
-
 let id = 0
-
 
 
 // первый счетчик для первого слайдера
@@ -77,7 +67,7 @@ for (let i=1; i <= photoAll1; i++){
   id++;
   
   photoNum += 1;
-// оптимизация - выводим гифки на нечетных карточках
+  // оптимизация - выводим гифки на нечетных карточках
   if (i % 2 != 0){
     gifNum += 1;
   }
