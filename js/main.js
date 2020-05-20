@@ -13,47 +13,35 @@ var slider2 = $('#slider-2');
 var gifNum = 0; 
 var photoNum = 0;
 
-var idMusic = 5;
-// let music1 = new Audio();
-// music1.src = "../sound/music/1.mp3";
-// music1.src = "../sound/start.mp3";
-// music1.play();
-// music1.addEventListener("ended", function() {
-//   console.log(true)
-// });
-let idAudio = 0;
-$(".music-btn").on("click", function(){
-  console.log(this)
-  let nowPlay = this.parentElement.firstElementChild;
+
+let idAudio = 4;
+
+
+$(".music-btn").on("click", function playMusic(){
+  
+  let musics = $(".div-audio").children("audio");
+  console.log(musics[idAudio])
+  console.log(idAudio < musics.length)
   if($(this).hasClass("music-pause")){
-    this.parentElement.firstElementChild.play();
-    
-  }else{
-    this.parentElement.firstElementChild.pause();
+    musics[idAudio].play();
+    console.log('play')
   }
-  let parent = this.parentElement;
-  let nextAudio = nowPlay.nextElementSibling;
-  nowPlay.addEventListener("ended", function(){
-    nowPlay.pause();
-    idAudio++;
-    nowPlay.nextElementSibling.play();
-//     if (idMusic > 6) idMusic = 1; 
+  else musics[idAudio].pause(); 
+
+  musics[idAudio].addEventListener("ended", function(){
+    musics[idAudio].pause();
+    console.log('next')
+    if (idAudio < musics.length){
+      idAudio++;
+    }
+    playMusic(idAudio);
   })
-// function musicPlay(){
-//   let ifEnd = false;
-//   let music = new Audio();
-//   music.src = `../sound/music/${idMusic}.mp3`;
-//   music.play();
-//   music.addEventListener("ended", function() {
-//     ifEnd = true;
-//     idMusic++;
-//     if (idMusic > 6) idMusic = 1; 
-//     return musicPlay();
-//   })
-// };
-// musicPlay();
+
 })
+
 let id = 0
+
+
 
 // первый счетчик для первого слайдера
 for (let i=1; i <= photoAll1; i++){
