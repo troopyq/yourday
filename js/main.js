@@ -54,14 +54,21 @@ $(".music-btn").on("click", function(){
 // musicPlay();
 })
 let id = 0
+
+// первый счетчик для первого слайдера
 for (let i=1; i <= photoAll1; i++){
   id++;
-  gifNum += 1;
+  
   photoNum += 1;
-
+// оптимизация - выводим гифки на нечетных карточках
+  if (i % 2 != 0){
+    gifNum += 1;
+  }
+  // повторяем гифки с начала если закончились
   if (gifNum > gifAll){
     gifNum = 1;
   }
+  // заменяем пропущенный текст
   if(text[i] == undefined){
     text[i] = replace;
   }
@@ -76,20 +83,29 @@ for (let i=1; i <= photoAll1; i++){
             </div>
           `;
   
-  slider1.append(card);
+  slider1.append(card);   //добавляем карточку в слайдер 1
+  // оптимизация - удаляем гифки на четных слайдах
+  if (i % 2 == 0){
+    $(`#${id} .gif-card img`).remove();
+  }
 }
 
 gifNum = 0; 
 photoNum = 0;
 card = '';
-
+// второй счетчик для второго слайдера
 for (let i=1; i <= photoAll2; i++){
-  gifNum += 1;
   photoNum += 1;
   id++;
+  // оптимизация - выводим гифки на нечетных карточках
+  if (i % 2 != 0){
+    gifNum += 1;
+  }
+  // повторяем гифки с начала если закончились
   if (gifNum > gifAll){
     gifNum = 1;
   }
+  // заменяем пропущенный текст
   if(text[i] == undefined){
     text[i] = replace;
   }
@@ -104,7 +120,11 @@ for (let i=1; i <= photoAll2; i++){
             </div>
           `;
   
-  slider2.append(card);
+  slider2.append(card);  //добавляем карточку в слайдер 2
+   // оптимизация - удаляем гифки на четных слайдах
+  if (i % 2 == 0){
+    $(`#${id} .gif-card img`).remove();
+  }
 }
 
 
