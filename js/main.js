@@ -1,6 +1,6 @@
 let tap = new Audio();
 tap.src = "sound/tap.mp3";
-tap.volume = 0.1;
+tap.volume = 0.04;
 
 var gifAll = 19;
 var photoAll1 = 79;
@@ -17,7 +17,7 @@ var photoNum = 0;
 
 let idAudio = 0;
 let musics = $(".div-audio").children("audio");
-
+$(".div-audio").createElement("div")
 
 function playMusic(){  
   console.log(musics[idAudio]);
