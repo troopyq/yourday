@@ -17,7 +17,8 @@ var photoNum = 0;
 
 let idAudio = 0;
 let musics = $(".div-audio").children("audio");
-$(".div-audio").createElement("div")
+document.createElement("div")
+
 
 function playMusic(){  
   console.log(musics[idAudio]);
