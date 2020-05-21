@@ -15,30 +15,58 @@ var gifNum = 0;
 var photoNum = 0;
 
 
-let idAudio = 4;
+let idAudio = 5;
 let musics = $(".div-audio").children("audio");
 
 
-
 function playMusic(){  
-  console.log(musics[idAudio])
-  console.log(!musics[idAudio].paused)
+  console.log(musics[idAudio]);
+  // console.log(!musics[idAudio].paused);
+  musics[idAudio].volume = 0.9;
 
   if ( musics[idAudio].paused && $(".music-btn").hasClass("music-play")){  
-    musics[idAudio].play();
+    var music = musics[idAudio].play();
     console.log('play____');
+
+   
   }
+
+  if (music !== undefined) {
+     music.then(_ => {
+       // Automatic playback started!
+       // Show playing UI.
+     })
+     music.catch(error => {
+       // Auto-play was prevented
+       // Show paused UI.
+     });
+   }
 
  
   musics[idAudio].addEventListener("ended", function(){
     musics[idAudio].pause();
-    console.log('next')
-    if (idAudio < musics.length - 1){
+    console.log('next');
+    if (idAudio < musics.length - 1  ){
+      
       idAudio++;
-       console.log(idAudio);
-       console.log('________');
-       playMusic();
-    }else setTimeout(playMusic, 500);
+      console.log(idAudio);
+      console.log('________');
+      playMusic();
+      
+    }else { 
+      idAudio = 2
+      musics[idAudio].setAttribute('loop', 'loop');
+      playMusic();
+
+      // console.log('end');
+      // idAudio = 0;
+      // $(".music-btn").toggleClass("music-play music-pause");
+      // return;
+
+
+      // idAudio--;
+      // setTimeout(playMusic, 800);
+    }
     
   })
 }
