@@ -15,7 +15,7 @@ var gifNum = 0;
 var photoNum = 0;
 
 
-let idAudio = 5;
+let idAudio = 0;
 let musics = $(".div-audio").children("audio");
 
 
