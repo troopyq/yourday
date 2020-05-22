@@ -22,7 +22,6 @@ document.createElement("div")
 
 function playMusic(){  
   console.log(musics[idAudio]);
-  // console.log(!musics[idAudio].paused);
   musics[idAudio].volume = 0.9;
 
   if ( musics[idAudio].paused && $(".music-btn").hasClass("music-play")){  
@@ -142,8 +141,8 @@ for (let i=1; i <= photoAll2; i++){
     gifNum = 1;
   }
   // заменяем пропущенный текст
-  if(text[i] == undefined){
-    text[i] = replace;
+  if(text2[i] == undefined){
+    text2[i] = replace;
   }
 
   card = `
@@ -152,7 +151,7 @@ for (let i=1; i <= photoAll2; i++){
               <div class="lock lock-close front"><img src="img/lock/lock-close.svg" alt=""></div>
               <div class="card-img back"><img src="img/photo-2/${photoNum}.jpg" alt=""></div>
               <div class="card-transparent back back-2"></div>
-              <div class="text front"><div class="text_inner"><p>${text[i]}</p></div></div>
+              <div class="text front"><div class="text_inner"><p>${text2[i]}</p></div></div>
             </div>
           `;
   
@@ -181,10 +180,8 @@ $(".lock img").on("click", function(){
   nextId = $(this).parent().parent().index(".card") + 2;
   if ($(this).parent().hasClass("lock-open")){
     tap.play();
-    console.log(tap)
     $(this).parent().fadeOut(300);
     $(this).parent().parent().addClass('open');
-    // $(this).parent().parent().addClass('card-next');
     $(this).parent().children(".text").addClass('text-none');
     $(`#${nextId}`).children(".lock").toggleClass('lock-close lock-open');
     $(`#${nextId}`).children(".lock").children("img").attr("src", "img/lock/lock-open.svg");
