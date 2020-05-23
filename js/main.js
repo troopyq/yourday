@@ -232,8 +232,8 @@ function renderNextCard2(){
     gifNum2 = 1;
   }
   // заменяем пропущенный текст
-  if(text2[id2] == undefined){
-    text2[id2] = replace;
+  if(text2[id2-id1] == undefined){
+    text2[id2-id1] = replace;
   }
 
   card2 = `<div class="slick-slide" data-slick-index="${id2-1}" aria-hidden="true" style="width: 100vw;" tabindex="-1">
@@ -280,7 +280,7 @@ function lockClick(){
         $(`#${id1} .gif-card img`).remove();
       }
     }
-  }, 500)
+  }, 200)
 
   setTimeout(() => {
     if ($(`#${id2 - 1}`).children(".lock").hasClass("lock-open") && (id2 - 1 + 3) <= photoAll2){
@@ -292,7 +292,7 @@ function lockClick(){
         $(`#${id2} .gif-card img`).remove();
       }
     }
-  },500)
+  },200)
 
 
 }

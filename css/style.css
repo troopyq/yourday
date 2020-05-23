@@ -75,6 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 @font-face {
   font-family: "Pixel Georgia";
   src: url(../fonts/Pixel_Georgia.ttf);
+  font-display: swap;
 }
 html, body {
   font-family: "Pixel Georgia", sans-serif;
@@ -388,7 +389,7 @@ body {
 }
 .section-card .card, .slick-slide div .card {
   margin: 0 auto;
-  display: block;
+  display: flex;
   position: relative;
   width: 100vw;
   height: 70vh;
@@ -592,6 +593,7 @@ body {
 .row-1 {
   margin-bottom: 400px;
 }
-.slick-slide{
+
+.slick-slide {
   min-width: 100vw;
 }
