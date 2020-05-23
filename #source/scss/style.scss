@@ -410,7 +410,7 @@ transform: rotateY(180deg);
 
 /*фикс бага с шириной в слайде*/
 .slick-slide{
-	min-width: 100%;
+	min-width: 100vw;
 }
 
 
@@ -451,6 +451,16 @@ transform: rotateY(180deg);
 		border-top: 15px solid transparent;
 		border-bottom: 15px solid transparent;
 		border-right: 25px solid $color-card;
+		
+	}
+}
+
+@media (min-width: 576px) {
+	.slick-slide {
+  min-width: 100%;
+
+}
+	.card{
 		
 	}
 }

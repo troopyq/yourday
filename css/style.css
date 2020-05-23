@@ -596,7 +596,7 @@ body {
 
 /*фикс бага с шириной в слайде*/
 .slick-slide {
-  min-width: 100%;
+  min-width: 100vw;
 }
 
 .popup {
@@ -637,4 +637,10 @@ body {
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-right: 25px solid #FFF8DC;
+}
+
+@media (min-width: 576px) {
+  .slick-slide {
+    min-width: 100%;
+  }
 }
