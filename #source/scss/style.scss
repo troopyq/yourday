@@ -408,6 +408,49 @@ transform: rotateY(180deg);
 	margin-bottom: 400px;
 }
 
+/*фикс бага с шириной в слайде*/
 .slick-slide{
-	min-width: 100vw;
+	min-width: 100%;
+}
+
+
+.popup{
+	display: block;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-color: $shadow-card;
+	z-index: 99;
+	transition: all 0.7s;
+}
+.pop{
+	position: fixed;
+	background-color: $color-card;
+	z-index: 100;
+	top: 20px;
+	left: 62%;
+	transform: translateX(-50%);
+	min-width: 70%;
+	padding: 15px;
+	color: darken($color-text-4, 40%);
+	border-radius: 20px;
+	box-shadow: 0px 5px 15px $shadow-card;
+	p{
+		line-height: 1.25;
+		font-size: 1.1rem;
+	}
+
+	&::before{
+		content: '';
+		position: absolute;
+		top: 20px;
+		left: -30px;
+		width: 30px;
+		height: 30px;
+		background-color: transparent;
+		border-top: 15px solid transparent;
+		border-bottom: 15px solid transparent;
+		border-right: 25px solid $color-card;
+		
+	}
 }

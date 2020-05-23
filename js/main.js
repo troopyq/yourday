@@ -65,7 +65,8 @@ function playMusic(){
 $(".music-btn").on("click", playMusic);
 // функция для включения выключения музыки покнопке и изменения стиля
 $(".music-btn").click( function(){
-  
+  // скрываю подсказку
+  $(".popup").fadeOut(500);
   // проверяю стоит ли музыка на паузе, если да то включаю музыку
   if ($(".music-btn").hasClass("music-pause")){
     $(".music-btn").toggleClass("music-pause music-play");
@@ -212,7 +213,7 @@ function renderNextCard2(){
            <div class="gif-card"><img src="img/gif/${gifNum2}.gif" alt=""></div>
            <div class="lock lock-close front"><img src="img/lock/lock-close.svg" alt=""></div>
            <div class="card-img back"><img src="img/photo-2/${id2-id1}.jpg" alt=""></div>
-           <div class="card-transparent back back-1 slick-arrow" aria-disabled="false"></div>
+           <div class="card-transparent back back-2 slick-arrow" aria-disabled="false"></div>
            <div class="text front"><div class="text_inner"><p>${text2[id2-id1]}</p></div></div>
          </div>
        </div>

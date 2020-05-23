@@ -338,7 +338,7 @@ body {
   z-index: -1;
 }
 
-.flip-container, .slick-slide div{
+.flip-container {
   perspective: 900px;
 }
 
@@ -596,5 +596,45 @@ body {
 
 /*фикс бага с шириной в слайде*/
 .slick-slide {
-  min-width: 100vw;
+  min-width: 100%;
+}
+
+.popup {
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(71, 71, 71, 0.25);
+  z-index: 99;
+  transition: all 0.7s;
+}
+
+.pop {
+  position: fixed;
+  background-color: #FFF8DC;
+  z-index: 100;
+  top: 20px;
+  left: 62%;
+  transform: translateX(-50%);
+  min-width: 70%;
+  padding: 15px;
+  color: #4a4a4a;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgba(71, 71, 71, 0.25);
+}
+.pop p {
+  line-height: 1.25;
+  font-size: 1.1rem;
+}
+.pop::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -30px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 25px solid #FFF8DC;
 }
