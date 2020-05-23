@@ -383,14 +383,14 @@ body {
 }
 
 .section-card, .slick-slide div {
-  display: flex;
+  display: block;
   margin-bottom: 5px;
 }
 .section-card .card, .slick-slide div .card {
   margin: 0 auto;
   display: flex;
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 70vh;
   margin-top: 200px;
   margin-bottom: 37px;

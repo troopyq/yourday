@@ -183,13 +183,13 @@ transform: rotateY(180deg);
 }
 
 .section-card, .slick-slide div{
-	display: flex;
+	display: block;
 	margin-bottom: 5px;
 	.card{
 		margin: 0 auto;
 		display: flex;
 		position: relative;
-		width: 100%;
+		width: 100vw;
 		height: 70vh; //550px
 		margin-top: 200px;
 		margin-bottom: 37px;
