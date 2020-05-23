@@ -210,7 +210,7 @@ function renderNextCard1(){
           <div id="${id1}" class="card flipper card-next">
            <div class="gif-card"><img src="img/gif/${gifNum1}.gif" alt=""></div>
            <div class="lock lock-close front"><img src="img/lock/lock-close.svg" alt=""></div>
-           <div class="card-img back"><img src="img/photo/${id1}.jpg" alt=""></div>
+           <div class="card-img back"><img data-lazy="img/photo/${id1}.jpg" alt=""></div>
            <div class="card-transparent back back-1 slick-arrow" aria-disabled="false"></div>
            <div class="text front"><div class="text_inner"><p>${text[id1]}</p></div></div>
          </div>
@@ -283,10 +283,10 @@ function lockClick(){
   }, 200)
 
   setTimeout(() => {
-    if ($(`#${id2 - 1}`).children(".lock").hasClass("lock-open") && (id2 - 1 + 3) <= photoAll2){
+    if ($(`#${id2 - 1}`).children(".lock").hasClass("lock-open") && (id2 - id1 + 2) <= photoAll2){
       $('#slider-2').slick('setPosition');
       console.log("render 2 - " + (id2+1))
-      console.log((id2 - 1 + 3) + ' <= ' + photoAll2 + ' -  ' + ((id2 - 1 + 3) <= photoAll2));
+      console.log((id2 - id1 + 2) + ' <= ' + photoAll2 + ' -  ' + ((id2 - id1 + 1) <= photoAll2));
       setTimeout(() => {$('#slider-2').slick('slickAdd', renderNextCard2());}, 1200)
       if (id2 % 2 == 0){
         $(`#${id2} .gif-card img`).remove();

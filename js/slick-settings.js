@@ -11,7 +11,7 @@ $('#slider-1').slick({
  				vertical: true, 
  				adaptiveHeight: true,
  				cssEase: "ease-in-out",
- 				lazyLoad: "progressive",
+ 				lazyLoad: "ondemand",
  				touchThreshold: 8,
  				focusOnChange: true,
  				nextArrow: $(".back-1"),
