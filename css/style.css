@@ -338,7 +338,7 @@ body {
   z-index: -1;
 }
 
-.flip-container {
+.flip-container, .slick-slide div{
   perspective: 900px;
 }
 
@@ -594,6 +594,7 @@ body {
   margin-bottom: 400px;
 }
 
+/*фикс бага с шириной в слайде*/
 .slick-slide {
   min-width: 100vw;
 }
