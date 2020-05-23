@@ -253,7 +253,7 @@ function renderNextCard2(){
 
 function lockClick(){
 
-   if ($(`#${photoAll1}`).children(".lock").hasClass("lock-open")){
+  if ($(`#${photoAll1}`).children(".lock").hasClass("lock-open")){
     $(`#${photoAll1+1}`).children(".lock").toggleClass('lock-close lock-open');
   }
   nextId = $(this).parent().parent().index(".card") + 2;
@@ -273,7 +273,7 @@ function lockClick(){
   // console.log((nextId + 3) + ' <= ' + id2 + ' -  ' + (nextId + 3 <= id2));
   setTimeout(() => {
     if($(`#${nextId}`).children(".lock").hasClass("lock-open") && nextId + 3 <= id2){
-      $('.slick-slider').slick('setPosition');
+      $('#slider-1').slick('setPosition');
       console.log("render 1 - " + (id1+1))
       setTimeout(()=> {$('#slider-1').slick('slickAdd', renderNextCard1());} ,1200)
       // $('#slider-1').slick('slickAdd', renderNextCard1());
@@ -285,7 +285,7 @@ function lockClick(){
 
   setTimeout(() => {
     if ($(`#${id2 - 1}`).children(".lock").hasClass("lock-open")){
-      $('.slick-slider').slick('setPosition');
+      $('#slider-2').slick('setPosition');
       console.log("render 2 - " + (id2+1))
       setTimeout(() => {$('#slider-2').slick('slickAdd', renderNextCard2());}, 1200)
       if (id2 % 2 == 0){
