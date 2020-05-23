@@ -166,8 +166,8 @@ for (let i=1; i <= 2; i++){
     gifNum2 = 1;
   }
   // заменяем пропущенный текст
-  if(text2[id2] == undefined){
-    text2[id2] = replace;
+  if(text2[i] == undefined){
+    text2[i] = replace;
   }
 
   card2 = `
@@ -270,13 +270,12 @@ function lockClick(){
     $(`#${nextId}`).children(".lock").children("img").attr("src", "img/lock/lock-open.svg");
     $(`#${nextId}`).children(".text").show();
   };
-  // console.log((nextId + 3) + ' <= ' + id2 + ' -  ' + (nextId + 3 <= id2));
+  
   setTimeout(() => {
     if($(`#${nextId}`).children(".lock").hasClass("lock-open") && nextId + 3 <= id2){
       $('#slider-1').slick('setPosition');
       console.log("render 1 - " + (id1+1))
       setTimeout(()=> {$('#slider-1').slick('slickAdd', renderNextCard1());} ,1200)
-      // $('#slider-1').slick('slickAdd', renderNextCard1());
       if (id1 % 2 == 0){
         $(`#${id1} .gif-card img`).remove();
       }
@@ -284,9 +283,10 @@ function lockClick(){
   }, 500)
 
   setTimeout(() => {
-    if ($(`#${id2 - 1}`).children(".lock").hasClass("lock-open")){
+    if ($(`#${id2 - 1}`).children(".lock").hasClass("lock-open") && (id2 - 1 + 3) <= photoAll2){
       $('#slider-2').slick('setPosition');
       console.log("render 2 - " + (id2+1))
+      console.log((id2 - 1 + 3) + ' <= ' + photoAll2 + ' -  ' + ((id2 - 1 + 3) <= photoAll2));
       setTimeout(() => {$('#slider-2').slick('slickAdd', renderNextCard2());}, 1200)
       if (id2 % 2 == 0){
         $(`#${id2} .gif-card img`).remove();
