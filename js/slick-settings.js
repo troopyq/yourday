@@ -18,6 +18,8 @@ $('#slider-1').slick({
  				// verticalSwiping: true,
  			});
 
+
+
 $('#slider-2').slick({
 				// dots: true,
 				infinite: false,
