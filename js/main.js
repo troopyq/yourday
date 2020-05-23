@@ -266,11 +266,11 @@ function lockClick(){
 
   // динамически добавляем слайды если следующий замок открыт к 2 слайдеру
   setTimeout(() => {
-    if ($(`#${id2 - 1}`).children(".lock").hasClass("lock-open") && (id2 - id1 + 2) <= photoAll2){
+    if ($(`#${id2 - 1}`).children(".lock").hasClass("lock-open") && (id2 - id1 + 1) <= photoAll2){
       // вроде как при перелистываении фиксирует позицию
       $('#slider-2').slick('setPosition');
       console.log("render 2 - " + (id2+1));
-      console.log((id2 - id1 + 2) + ' <= ' + photoAll2 + ' -  ' + ((id2 - id1 + 1) <= photoAll2));
+      console.log((id2 - id1 + 1) + ' <= ' + photoAll2 + ' -  ' + ((id2 - id1 + 1) <= photoAll2));
       setTimeout(() => {$('#slider-2').slick('slickAdd', renderNextCard2());}, 1200);  //ставим таймер в 1200 чтобы работала анимация
       // удаляем четных слайдах гифки
       if (id2 % 2 == 0){
