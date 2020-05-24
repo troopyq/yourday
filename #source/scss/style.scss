@@ -19,7 +19,6 @@ body{
 	max-width: 100%;
 	overflow-x: hidden;
 	touch-action: manipulation;
-
 	text-transform: lowercase;
 }
 
@@ -405,7 +404,7 @@ transform: rotateY(180deg);
 }
 
 .row-1{
-	margin-bottom: 400px;
+	margin-bottom: 250px;
 }
 
 /*фикс бага с шириной в слайде*/
@@ -454,6 +453,53 @@ transform: rotateY(180deg);
 		
 	}
 }
+
+.stories {
+	margin-top: 250px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&_story {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 95vw;
+		background-color: rgba(255, 248, 220, 1) ;
+		box-shadow: 0 5px 15px $shadow-card;
+		padding: 30px 25px;
+		border-radius: 100px 100px 40px 40px;
+		margin-bottom: 100px;
+	}
+}
+.story {
+	&_image {
+		width: 200px;
+		height: 200px;
+		margin-top: 30px;
+		margin-bottom: 50px;
+		border-radius: 50%;
+		box-shadow: 0 7px 20px darken($shadow-card, 20%);
+		img{
+			width: 100%;
+			border-radius: 50%;
+		}
+	}
+	&_text {
+		
+		p{
+			text-transform: none;
+			font-size: 1.4rem;
+			line-height: 1.3;
+			color: darken($color-text-4, 40%);
+		}
+	}
+}
+
+
+
+
 
 @media (min-width: 576px) {
 	.slick-slide {
