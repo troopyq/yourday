@@ -1,7 +1,10 @@
+$(".slider").hide();
+
 //получаю аудио и создаю объект звука нажатия на слайд
 let tap = new Audio();
 tap.src = "sound/tap.mp3";
 tap.volume = 0.04;
+
 
 // инициализирую количество фото и настройки
 var gifAll = 19, photoAll1 = 81, photoAll2 = 125;
@@ -105,7 +108,7 @@ for (let i=1; i <= 2; i++){
                <div class="gif-card"><img src="img/gif/${gifNum1}.gif" alt=""></div>
                <div class="lock lock-close front"><img src="img/lock/lock-close.svg" alt=""></div>
                <div class="card-img back"><img src="img/photo/${photoNum1}.jpg" alt=""></div>
-               <div class="card-transparent back back-1"></div>
+               <div class="card-transparent back back-1 slick-arrow"></div>
                <div class="text front"><div class="text_inner"><p>${text[id1]}</p></div></div>
              </div>
            `;
@@ -141,7 +144,7 @@ for (let i=1; i <= 2; i++){
               <div class="gif-card"><img src="img/gif/${gifNum2}.gif" alt=""></div>
               <div class="lock lock-close front"><img src="img/lock/lock-close.svg" alt=""></div>
               <div class="card-img back"><img src="img/photo-2/${photoNum2}.jpg" alt=""></div>
-              <div class="card-transparent back back-2"></div>
+              <div class="card-transparent back back-2 slick-arrow"></div>
               <div class="text front"><div class="text_inner"><p>${text2[i]}</p></div></div>
             </div>
           `;
@@ -233,18 +236,19 @@ function lockClick(){
     $(`#${photoAll1+1}`).children(".lock").toggleClass('lock-close lock-open');
   }
   nextId = $(this).parent().parent().index(".card") + 2;
-  console.log(nextId)
+  // console.log(nextId)
   
   // проверяем открыт ли замок 
-  if ($(this).parent().hasClass("lock-open")){
+  if ($(this).parent().hasClass("lock-open") || $(this).attr("src") == "img/lock/lock-open.svg"){
     $(this).parent().parent().addClass('open');
-    $(this).parent().fadeOut(300);
+    // $(this).parent().fadeOut(300);
     setTimeout(() => tap.play(), 260)
-    console.log("open")
     // скрываем текст при открытии слайда
     $(this).parent().children(".text").addClass('text-none');
     // открываем следующий замок
-    $(`#${nextId}`).children(".lock").toggleClass('lock-close lock-open');
+    $(`#${nextId}`).children(".lock").removeClass('lock-close');
+    $(`#${nextId}`).children(".lock").addClass('lock-open');
+    // $(`#${nextId}`).children(".lock").toggleClass('lock-close lock-open');
     $(`#${nextId}`).children(".lock").children("img").attr("src", "img/lock/lock-open.svg");
     // показываем текст к след слайду
     $(`#${nextId}`).children(".text").show();
@@ -255,27 +259,27 @@ function lockClick(){
     if($(`#${nextId}`).children(".lock").hasClass("lock-open") && nextId + 3 <= id2){
       // вроде как при перелистываении фиксирует позицию
       $('#slider-1').slick('setPosition');
-      console.log("render 1 - " + (id1+1));
-      setTimeout(()=> {$('#slider-1').slick('slickAdd', renderNextCard1());} ,1200);  //ставим таймер в 1200 чтобы работала анимация
-      // удаляем четных слайдах гифки
+       // удаляем четных слайдах гифки
       if (id1 % 2 == 0){
         $(`#${id1} .gif-card img`).remove();
       }
+      //рендерим слайд в 1 слайдер
+      setTimeout(()=> {$('#slider-1').slick('slickAdd', renderNextCard1());} ,1000);  //ставим таймер в 1200 чтобы работала анимация
     } //условие проверки нужно ли добавлять слайд
-  }, 200)
+  }, 0)
 
   // динамически добавляем слайды если следующий замок открыт к 2 слайдеру
   setTimeout(() => {
     if ($(`#${id2 - 1}`).children(".lock").hasClass("lock-open") && (id2 - id1 + 1) <= photoAll2){
       // вроде как при перелистываении фиксирует позицию
       $('#slider-2').slick('setPosition');
-      console.log("render 2 - " + (id2+1));
-      console.log((id2 - id1 + 1) + ' <= ' + photoAll2 + ' -  ' + ((id2 - id1 + 1) <= photoAll2));
-      setTimeout(() => {$('#slider-2').slick('slickAdd', renderNextCard2());}, 1200);  //ставим таймер в 1200 чтобы работала анимация
       // удаляем четных слайдах гифки
       if (id2 % 2 == 0){
         $(`#${id2} .gif-card img`).remove();
       } 
+      // рендерим следующий слайд во 2 слайдер
+      setTimeout(() => {$('#slider-2').slick('slickAdd', renderNextCard2());}, 1200);  //ставим таймер в 1200 чтобы работала анимация
+      
     }//условие проверки нужно ли добавлять слайд
   },200)
 
@@ -300,9 +304,9 @@ $('body').on("click", ".lock img", lockClick);
 
 // добавляем возможность литсать к след слайдам к динамически добавленным слайдам для 1 слайдера
 $("#slider-1").on("click", ".back-1", ()=>{
-  $("#slider-1").slick("slickNext")
+  $("#slider-1").slick("slickNext");
 })
 // добавляем возможность литсать к след слайдам к динамически добавленным слайдам для 1 слайдера
 $("#slider-2").on("click", ".back-2", ()=>{
-  $("#slider-2").slick("slickNext")
+  $("#slider-2").slick("slickNext");
 })

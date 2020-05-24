@@ -1,8 +1,7 @@
-$('#slider-1').slick({
-				// dots: true,
+$(document).ready(function(){
+	$('#slider-1').slick({
 				infinite: false,
 				speed: 1500,
-				// accessibility: true,
 				arrows: true,
 				centerMode: true,
 				centerPadding: '15px',
@@ -15,16 +14,12 @@ $('#slider-1').slick({
  				touchThreshold: 8,
  				focusOnChange: true,
  				nextArrow: $(".back-1"),
- 				// verticalSwiping: true,
+
  			});
 
-
-
 $('#slider-2').slick({
-				// dots: true,
 				infinite: false,
 				speed: 1500,
-				// accessibility: true,
 				arrows: true,
 				centerMode: true,
 				centerPadding: '15px',
@@ -37,6 +32,8 @@ $('#slider-2').slick({
  				touchThreshold: 8,
  				focusOnChange: true,
  				nextArrow: $(".back-2"),
- 				// verticalSwiping: true,
+ 				
  			});
+	$(".slider").show();
+})
 

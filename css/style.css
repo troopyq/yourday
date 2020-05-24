@@ -343,7 +343,6 @@ body {
 }
 
 .open {
-  transition-delay: 2s;
   transform: rotateY(180deg);
 }
 
@@ -355,11 +354,10 @@ body {
 .flipper {
   perspective: 900px;
   display: flex;
-  transition: 0.6s;
+  transition: 0.5s;
   justify-content: center;
   transform-style: preserve-3d;
   position: relative;
-  transition-delay: 0.3s;
 }
 
 .front, .back {
