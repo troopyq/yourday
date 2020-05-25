@@ -468,7 +468,7 @@ transform: rotateY(180deg);
 		width: 95vw;
 		background-color: rgba(255, 248, 220, 1) ;
 		box-shadow: 0 5px 15px $shadow-card;
-		padding: 30px 25px;
+		padding: 30px 20px;
 		border-radius: 100px 100px 40px 40px;
 		margin-bottom: 100px;
 	}
@@ -476,7 +476,7 @@ transform: rotateY(180deg);
 .story {
 	p{
 			text-transform: none;
-			font-size: 1.4rem;
+			font-size: 1.3rem;
 			line-height: 1.3;
 			color: darken($color-text-4, 40%);
 		}
@@ -494,7 +494,7 @@ transform: rotateY(180deg);
 		
 	}
 	&_name{
-		margin-bottom: 40px;
+		margin-bottom: 60px;
 		position: relative;
 		width: 80%;
 		
@@ -513,38 +513,40 @@ transform: rotateY(180deg);
 			font-size: 1.6rem;
 			vertical-align: center;
 		}
-		&::after{
+		
+	}
+	&_text {
+			position: relative;
+
+			&::before{
 			content: '';
 			display: block;
 			position: absolute;
-			top: 30px;
+			top: -60px;
 			left: 50%;
 			transform: translateX(-50%);
 			width: 80vw	;
 			height: 2px;
-			margin-top: 30px;
+			margin-top: 20px;
 			background-color: darken($shadow-card, 0%);
 			border-radius: 2px;
 		}
-	}
-	&_text {
 		
 		
 	}
 }
-.ml2 {
-  // font-weight: 900;
-  // font-size: 3.5em;
-  word-wrap: normal !inherit; 
-}
-
-.ml2 .letter {
-  display: inline-block;
-  // line-height: 1em;
+.hide{
+	opacity: 0.1;
 }
 
 
-
+@media (max-width: 400px){
+	.story_text{
+		p{
+			font-size: 1.15rem;
+		}
+	}
+}
 
 @media (min-width: 576px) {
 	.slick-slide {

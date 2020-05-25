@@ -7,10 +7,10 @@ tap.volume = 0.04;
 
 
 // инициализирую количество фото и настройки
-var gifAll = 19, photoAll1 = 81, photoAll2 = 125;
+var gifAll = 19, photoAll1 = 86, photoAll2 = 129;
 var replace = 'Просто смотрите фото ^_^';
 var gifNum1 = 0, gifNum2 = 0, photoNum1 = 0, photoNum2 = 0; 
-var id1 = 0, id2 = 81;
+var id1 = 0, id2 = 86;
 
 // пустышка и id слайда
 var card1 = '', card2 = '';
@@ -107,7 +107,7 @@ for (let i=1; i <= 2; i++){
              <div id="${id1}" class="card flipper card-next">
                <div class="gif-card"><img src="img/gif/${gifNum1}.gif" alt=""></div>
                <div class="lock lock-close front"><img src="img/lock/lock-close.svg" alt=""></div>
-               <div class="card-img back"><img src="img/photo/${photoNum1}.jpg" alt=""></div>
+               <div class="card-img back"><img src="img/photo/ (${photoNum1}).jpg" alt=""></div>
                <div class="card-transparent back back-1 slick-arrow"></div>
                <div class="text front"><div class="text_inner"><p>${text[id1]}</p></div></div>
              </div>
@@ -143,7 +143,7 @@ for (let i=1; i <= 2; i++){
             <div id="${id2}" class="card flipper card-next">
               <div class="gif-card"><img src="img/gif/${gifNum2}.gif" alt=""></div>
               <div class="lock lock-close front"><img src="img/lock/lock-close.svg" alt=""></div>
-              <div class="card-img back"><img src="img/photo-2/${photoNum2}.jpg" alt=""></div>
+              <div class="card-img back"><img src="img/photo-2/ (${photoNum2}).jpg" alt=""></div>
               <div class="card-transparent back back-2 slick-arrow"></div>
               <div class="text front"><div class="text_inner"><p>${text2[i]}</p></div></div>
             </div>
@@ -180,7 +180,7 @@ function renderNextCard1(){
           <div id="${id1}" class="card flipper card-next">
            <div class="gif-card"><img src="img/gif/${gifNum1}.gif" alt=""></div>
            <div class="lock lock-close front"><img src="img/lock/lock-close.svg" alt=""></div>
-           <div class="card-img back"><img src="img/photo/${id1}.jpg" alt=""></div>
+           <div class="card-img back"><img src="img/photo/ (${id1}).jpg" alt=""></div>
            <div class="card-transparent back back-1 slick-arrow" aria-disabled="false"></div>
            <div class="text front"><div class="text_inner"><p>${text[id1]}</p></div></div>
          </div>
@@ -215,7 +215,7 @@ function renderNextCard2(){
           <div id="${id2}" class="card flipper card-next">
            <div class="gif-card"><img src="img/gif/${gifNum2}.gif" alt=""></div>
            <div class="lock lock-close front"><img src="img/lock/lock-close.svg" alt=""></div>
-           <div class="card-img back"><img src="img/photo-2/${id2-id1}.jpg" alt=""></div>
+           <div class="card-img back"><img src="img/photo-2/ (${id2-id1}).jpg" alt=""></div>
            <div class="card-transparent back back-2 slick-arrow" aria-disabled="false"></div>
            <div class="text front"><div class="text_inner"><p>${text2[id2-id1]}</p></div></div>
          </div>

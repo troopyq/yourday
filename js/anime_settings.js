@@ -1,20 +1,7 @@
-// Wrap every letter in a span
-var textWrapper = document.querySelector('.ml2');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml2 .letter',
-    scale: [4,1],
-    opacity: [0,1],
-    translateZ: 0,
-    easing: "easeOutExpo",
-    duration: 950,
-    delay: (el, i) => 70*i
-  }).add({
-    targets: '.ml2',
-    opacity: 1,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 2000
-  });
+ const vpc = new ViewportChecker('.col-12', {
+    classToAdd: 'animate__animated animate__slideInUp',
+     offset: 200,
+     // removeClassAfterAnimation: true,
+     callbackFunction: function(elem, action){},
+ });
+document.addEventListener('DOMContentLoaded', () => vpc.attach());
