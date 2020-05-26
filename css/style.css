@@ -400,9 +400,9 @@ body {
 }
 .section-card .card .gif-card, .slick-slide div .card .gif-card {
   display: flex;
-  height: 200px;
+  height: 23vh;
   justify-content: center;
-  margin-top: -195px;
+  margin-top: -23vh;
 }
 .section-card .card .gif-card img, .slick-slide div .card .gif-card img {
   text-align: center;
@@ -714,6 +714,10 @@ body {
 
 .hide {
   opacity: 0.1;
+}
+
+.animate__animated {
+  animation-delay: 2s;
 }
 
 @media (max-width: 400px) {

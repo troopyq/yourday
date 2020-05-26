@@ -200,9 +200,9 @@ transform: rotateY(180deg);
 
 		.gif-card{
 			display: flex;
-			height: 200px;
+			height: 23vh;  //200px
 			justify-content: center;
-			margin-top: -195px;
+			margin-top: -23vh;  //-195px
 
 			img{
 				text-align: center;
@@ -539,6 +539,9 @@ transform: rotateY(180deg);
 	opacity: 0.1;
 }
 
+.animate__animated{
+	animation-delay: 2s;
+}
 
 @media (max-width: 400px){
 	.story_text{

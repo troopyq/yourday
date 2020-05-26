@@ -1,4 +1,5 @@
 $(".slider").hide();
+$(".stories").hide();
 
 //получаю аудио и создаю объект звука нажатия на слайд
 let tap = new Audio();
@@ -283,6 +284,11 @@ function lockClick(){
     }//условие проверки нужно ли добавлять слайд
   },200)
 
+  slick_index = $(this).parent().parent().parent().parent(".slick-slide");
+  if(slick_index.attr("data-slick-index") == photoAll1-2 || 
+     slick_index.attr("data-slick-index") == photoAll1-1 ){
+    slick_index.attr("tabindex", "-1")
+  }
 
 }
 
@@ -310,3 +316,6 @@ $("#slider-1").on("click", ".back-1", ()=>{
 $("#slider-2").on("click", ".back-2", ()=>{
   $("#slider-2").slick("slickNext");
 })
+
+
+setTimeout(()=> $(".stories").show(), 0)
