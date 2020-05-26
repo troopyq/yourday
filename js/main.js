@@ -1,5 +1,5 @@
 $(".slider").hide();
-$(".stories").hide();
+// $(".stories").hide();
 
 //получаю аудио и создаю объект звука нажатия на слайд
 let tap = new Audio();
@@ -243,7 +243,7 @@ function lockClick(){
   if ($(this).parent().hasClass("lock-open") || $(this).attr("src") == "img/lock/lock-open.svg"){
     $(this).parent().parent().addClass('open');
     // $(this).parent().fadeOut(300);
-    setTimeout(() => tap.play(), 260)
+    setTimeout(() => tap.play(), 50)
     // скрываем текст при открытии слайда
     $(this).parent().children(".text").addClass('text-none');
     // открываем следующий замок
@@ -265,7 +265,7 @@ function lockClick(){
         $(`#${id1} .gif-card img`).remove();
       }
       //рендерим слайд в 1 слайдер
-      setTimeout(()=> {$('#slider-1').slick('slickAdd', renderNextCard1());} ,1000);  //ставим таймер в 1200 чтобы работала анимация
+      setTimeout(()=> {$('#slider-1').slick('slickAdd', renderNextCard1());} ,700);  //ставим таймер в 1200 чтобы работала анимация
     } //условие проверки нужно ли добавлять слайд
   }, 0)
 
@@ -279,10 +279,10 @@ function lockClick(){
         $(`#${id2} .gif-card img`).remove();
       } 
       // рендерим следующий слайд во 2 слайдер
-      setTimeout(() => {$('#slider-2').slick('slickAdd', renderNextCard2());}, 1200);  //ставим таймер в 1200 чтобы работала анимация
+      setTimeout(() => {$('#slider-2').slick('slickAdd', renderNextCard2());}, 700);  //ставим таймер в 1200 чтобы работала анимация
       
     }//условие проверки нужно ли добавлять слайд
-  },200)
+  },0)
 
   slick_index = $(this).parent().parent().parent().parent(".slick-slide");
   if(slick_index.attr("data-slick-index") == photoAll1-2 || 
@@ -317,5 +317,94 @@ $("#slider-2").on("click", ".back-2", ()=>{
   $("#slider-2").slick("slickNext");
 })
 
+// setTimeout(()=> $(".stories").show(), 0)
 
-setTimeout(()=> $(".stories").show(), 0)
+// let wh = $window.height();
+
+// $(window).scroll(function(){
+//     if ( $(this).scrollTop() + wh > $("#s1").offset().top ) {
+//         $("#s1").addClass('animate__animated animate__zoomIn');
+//     }if ( $(this).scrollTop() + wh > $("#s2").offset().top ) {
+//         $("#s2").addClass('animate__animated animate__zoomIn');
+//     }if ( $(this).scrollTop() + wh > $("#s3").offset().top  ) {
+//         $("#s3").addClass('animate__animated animate__zoomIn');
+//     }if ( $(this).scrollTop() > $("#s4").offset().top - 200 ) {
+//         $("#s4").addClass('animate__animated animate__zoomIn');
+//     }if ( $(this).scrollTop() > $("#s5").offset().top - 200 ) {
+//         $("#s5").addClass('animate__animated animate__zoomIn');
+//     }if ( $(this).scrollTop() > $("#s6").offset().top - 200 ) {
+//         $("#s6").addClass('animate__animated animate__zoomIn');
+//     }if ( $(this).scrollTop() > $("#st1").offset().top - 200 ) {
+//         $("#st1").addClass('animate__animated animate__zoomIn');
+//     }if ( $(this).scrollTop() > $("#st2").offset().top - 200 ) {
+//         $("#st2").addClass('animate__animated animate__zoomIn');
+//     }if ( $(this).scrollTop() > $("#st3").offset().top - 200 ) {
+//         $("#st3").addClass('animate__animated animate__zoomIn');
+//     }if ( $(this).scrollTop() > $("#st4").offset().top - 200 ) {
+//         $("#st4").addClass('animate__animated animate__zoomIn');
+//     }if ( $(this).scrollTop() > $("#st5").offset().top - 200 ) {
+//         $("#st5").addClass('animate__animated animate__zoomIn');
+//     }if ( $(this).scrollTop() > $("#st6").offset().top - 200 ) {
+//         $("#st6").addClass('animate__animated animate__zoomIn');
+//     }if ( $(this).scrollTop() > $("#st7").offset().top - 200 ) {
+//         $("#st7").addClass('animate__animated animate__zoomIn');
+//     }if ( $(this).scrollTop() > $("#st8").offset().top - 200 ) {
+//         $("#st8").addClass('animate__animated animate__zoomIn');
+//     }
+// });
+
+
+jQuery.fn.extend({
+  onAppearanceAddClass: function(class_to_add) {
+    var $window = $( window ),
+        window_height = $window.height(),
+        array_of_$elements = [];
+    this.each(function(i,el) {
+      array_of_$elements.push($( el ));
+    })
+    scrollHandler();
+    if (array_of_$elements.length) {
+      $window.on('resize', resizeHandler).on('resize', scrollHandler).on('scroll', scrollHandler);
+    }
+    function resizeHandler() {
+      window_height = $window.height();
+    }
+    function watchProcessedElements(array_of_indexes) {
+      var l, i;
+      for (l = array_of_indexes.length, i = l - 1; i > -1; --i) {
+        array_of_$elements.splice(array_of_indexes[i], 1);
+      }
+      if (!array_of_$elements.length) {
+        $window.off('resize', resizeHandler).off('scroll', scrollHandler).off('resize', scrollHandler);
+      }
+    }
+    function scrollHandler() {
+      var i, l, processed = [];
+      for ( l = array_of_$elements.length, i = 0; i < l; ++i ) {
+        if ($window.scrollTop() + window_height - 80 > array_of_$elements[i].offset().top) {
+          array_of_$elements[i].addClass(class_to_add);
+          processed.push(i); 
+        }
+      }
+      if (processed.length) {
+        watchProcessedElements(processed);
+      }
+    }
+    return this;
+  }
+})
+
+$('#s1').onAppearanceAddClass('animate__animated animate__zoomIn showop');
+$('#s2').onAppearanceAddClass('animate__animated animate__zoomIn showop');
+$('#s3').onAppearanceAddClass('animate__animated animate__zoomIn showop');
+$('#s4').onAppearanceAddClass('animate__animated animate__zoomIn showop');
+$('#s5').onAppearanceAddClass('animate__animated animate__zoomIn showop');
+$('#s6').onAppearanceAddClass('animate__animated animate__zoomIn showop');
+$('#st1').onAppearanceAddClass('animate__animated animate__zoomIn showop');
+$('#st2').onAppearanceAddClass('animate__animated animate__zoomIn showop');
+$('#st3').onAppearanceAddClass('animate__animated animate__zoomIn showop');
+$('#st4').onAppearanceAddClass('animate__animated animate__zoomIn showop');
+$('#st5').onAppearanceAddClass('animate__animated animate__zoomIn showop');
+$('#st6').onAppearanceAddClass('animate__animated animate__zoomIn showop');
+$('#st7').onAppearanceAddClass('animate__animated animate__zoomIn showop');
+$('#st8').onAppearanceAddClass('animate__animated animate__zoomIn showop');
