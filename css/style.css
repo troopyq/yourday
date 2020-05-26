@@ -717,6 +717,10 @@ body {
   opacity: 0;
 }
 
+#s4 {
+  opacity: 1 !important;
+}
+
 .story p, .story_image {
   opacity: 0;
 }

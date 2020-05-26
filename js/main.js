@@ -265,7 +265,7 @@ function lockClick(){
         $(`#${id1} .gif-card img`).remove();
       }
       //рендерим слайд в 1 слайдер
-      setTimeout(()=> {$('#slider-1').slick('slickAdd', renderNextCard1());} ,700);  //ставим таймер в 1200 чтобы работала анимация
+      setTimeout(()=> {$('#slider-1').slick('slickAdd', renderNextCard1());} ,900);  //ставим таймер в 1200 чтобы работала анимация
     } //условие проверки нужно ли добавлять слайд
   }, 0)
 
@@ -279,7 +279,7 @@ function lockClick(){
         $(`#${id2} .gif-card img`).remove();
       } 
       // рендерим следующий слайд во 2 слайдер
-      setTimeout(() => {$('#slider-2').slick('slickAdd', renderNextCard2());}, 700);  //ставим таймер в 1200 чтобы работала анимация
+      setTimeout(() => {$('#slider-2').slick('slickAdd', renderNextCard2());}, 900);  //ставим таймер в 1200 чтобы работала анимация
       
     }//условие проверки нужно ли добавлять слайд
   },0)
@@ -364,7 +364,7 @@ jQuery.fn.extend({
 $('#s1').onAppearanceAddClass('animate__animated animate__zoomIn showop');
 $('#s2').onAppearanceAddClass('animate__animated animate__zoomIn showop');
 $('#s3').onAppearanceAddClass('animate__animated animate__zoomIn showop');
-$('#s4').onAppearanceAddClass('animate__animated animate__zoomIn showop');
+// $('#s4').onAppearanceAddClass('animate__animated animate__zoomIn showop');
 $('#s5').onAppearanceAddClass('animate__animated animate__zoomIn showop');
 $('#s6').onAppearanceAddClass('animate__animated animate__zoomIn showop');
 $('#st1').onAppearanceAddClass('animate__animated animate__zoomIn showop');
