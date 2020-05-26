@@ -319,39 +319,6 @@ $("#slider-2").on("click", ".back-2", ()=>{
 
 // setTimeout(()=> $(".stories").show(), 0)
 
-// let wh = $window.height();
-
-// $(window).scroll(function(){
-//     if ( $(this).scrollTop() + wh > $("#s1").offset().top ) {
-//         $("#s1").addClass('animate__animated animate__zoomIn');
-//     }if ( $(this).scrollTop() + wh > $("#s2").offset().top ) {
-//         $("#s2").addClass('animate__animated animate__zoomIn');
-//     }if ( $(this).scrollTop() + wh > $("#s3").offset().top  ) {
-//         $("#s3").addClass('animate__animated animate__zoomIn');
-//     }if ( $(this).scrollTop() > $("#s4").offset().top - 200 ) {
-//         $("#s4").addClass('animate__animated animate__zoomIn');
-//     }if ( $(this).scrollTop() > $("#s5").offset().top - 200 ) {
-//         $("#s5").addClass('animate__animated animate__zoomIn');
-//     }if ( $(this).scrollTop() > $("#s6").offset().top - 200 ) {
-//         $("#s6").addClass('animate__animated animate__zoomIn');
-//     }if ( $(this).scrollTop() > $("#st1").offset().top - 200 ) {
-//         $("#st1").addClass('animate__animated animate__zoomIn');
-//     }if ( $(this).scrollTop() > $("#st2").offset().top - 200 ) {
-//         $("#st2").addClass('animate__animated animate__zoomIn');
-//     }if ( $(this).scrollTop() > $("#st3").offset().top - 200 ) {
-//         $("#st3").addClass('animate__animated animate__zoomIn');
-//     }if ( $(this).scrollTop() > $("#st4").offset().top - 200 ) {
-//         $("#st4").addClass('animate__animated animate__zoomIn');
-//     }if ( $(this).scrollTop() > $("#st5").offset().top - 200 ) {
-//         $("#st5").addClass('animate__animated animate__zoomIn');
-//     }if ( $(this).scrollTop() > $("#st6").offset().top - 200 ) {
-//         $("#st6").addClass('animate__animated animate__zoomIn');
-//     }if ( $(this).scrollTop() > $("#st7").offset().top - 200 ) {
-//         $("#st7").addClass('animate__animated animate__zoomIn');
-//     }if ( $(this).scrollTop() > $("#st8").offset().top - 200 ) {
-//         $("#st8").addClass('animate__animated animate__zoomIn');
-//     }
-// });
 
 
 jQuery.fn.extend({
@@ -381,7 +348,7 @@ jQuery.fn.extend({
     function scrollHandler() {
       var i, l, processed = [];
       for ( l = array_of_$elements.length, i = 0; i < l; ++i ) {
-        if ($window.scrollTop() + window_height - 80 > array_of_$elements[i].offset().top) {
+        if ($window.scrollTop() + window_height - 60 > array_of_$elements[i].offset().top) {
           array_of_$elements[i].addClass(class_to_add);
           processed.push(i); 
         }
@@ -408,3 +375,5 @@ $('#st5').onAppearanceAddClass('animate__animated animate__zoomIn showop');
 $('#st6').onAppearanceAddClass('animate__animated animate__zoomIn showop');
 $('#st7').onAppearanceAddClass('animate__animated animate__zoomIn showop');
 $('#st8').onAppearanceAddClass('animate__animated animate__zoomIn showop');
+$('.story p').onAppearanceAddClass('animate__animated animate__slideInUp showop');
+$('.story_image').onAppearanceAddClass('animate__animated animate__zoomIn showop');

@@ -717,8 +717,16 @@ body {
   opacity: 0;
 }
 
+.story p, .story_image {
+  opacity: 0;
+}
+
 .showop {
   opacity: 1 !important;
+}
+
+.story_image .animate__animated {
+  animation-delay: 1s !important;
 }
 
 @media (max-width: 400px) {
