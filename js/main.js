@@ -290,6 +290,16 @@ function lockClick(){
     slick_index.attr("tabindex", "-1")
   }
 
+  if ($(`#${photoAll1}`).children('.lock').hasClass('lock-open')){
+    
+    arrows = '<img class="arrows prerow" src="img/arrows.svg" alt=""><img class="arrows prerow" src="img/arrows.svg" alt=""><img class="arrows prerow" src="img/arrows.svg" alt="">'
+    $('.row-1').append(arrows)
+}if ($(`#${photoAll2}`).children('.lock').hasClass('lock-open')){
+    
+    arrows = '<img class="arrows prerow" src="img/arrows.svg" alt=""><img class="arrows prerow" src="img/arrows.svg" alt=""><img class="arrows prerow" src="img/arrows.svg" alt="">'
+    $('.row-2').append(arrows)
+}
+
 }
 
 

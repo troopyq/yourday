@@ -21,6 +21,9 @@ body{
 	touch-action: manipulation;
 	text-transform: lowercase;
 }
+.row{
+	position: relative;
+}
 
 .section-1{
 	position: relative;
@@ -404,7 +407,7 @@ transform: rotateY(180deg);
 }
 
 .row-1{
-	margin-bottom: 250px;
+	margin-bottom: 150px;
 }
 
 /*фикс бага с шириной в слайде*/
@@ -551,6 +554,51 @@ transform: rotateY(180deg);
 	animation-delay: 1s !important;
 }
 
+.gide{
+	background-color: rgba(255,248,220,0.5);
+	padding: 20px;
+	border-radius: 60px;
+	box-shadow: 0 5px 20px $shadow-card;
+	h3{
+		font-size: 2rem;
+		color: darken($color-text-4, 50%);
+		margin: 30px 0;
+		margin-bottom: 50px;
+	}
+	h4{
+		padding: 20px;
+		color: darken($color-text-4, 40%);
+		text-align: center;
+		text-decoration: underline;
+		font-weight: bold;
+		line-height: 1.5;
+		font-size: 1.2rem;
+	}
+}
+
+.arrows{
+	width: 90px;
+	height: auto;
+	overflow: hidden;
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%) rotate(90deg);
+	&:nth-child(2){
+		left: 45%;
+	}
+	&:nth-child(3){
+		left: 55%;
+	}
+}
+.prerow{
+	bottom: -10px;
+	width: 120px;
+}
+
+
+// --------------------------------
+// --------------------------------
 @media (max-width: 400px){
 	.story_text{
 		p{
